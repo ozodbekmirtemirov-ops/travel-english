@@ -1,0 +1,2108 @@
+<!DOCTYPE html>
+<html lang="ru" data-mode="system">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>TRAVEL ENGLISH</title>
+<meta name="description" content="Learn English. Travel confidently. 600 travel words, combinations and sentences.">
+<meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0c0f" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Travel English">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/*
+VOICE: calm, premium, encouraging — a pocket travel coach.
+IDEA: a boarding-pass / passport-stamp journey; each lesson is a stop on a route.
+PICTURE: soft illustrated lesson tiles, big study cards, a live progress ring.
+COLOUR and TYPE: white cards on #f5f5f7, graphite ink, soft green for progress, quiet blue for actions, red only for errors. Inter / system SF.
+LAYOUT: mobile-first single column with bottom tab bar; sidebar from 900px; focused full-screen sessions.
+*/
+:root{color-scheme:light dark;
+--bg:light-dark(#f5f5f7,#0b0c0f);--card:light-dark(#ffffff,#18191d);--card2:light-dark(#fbfbfd,#1f2025);
+--ink:light-dark(#1d1d1f,#f2f2f5);--ink2:light-dark(#6e6e73,#a1a1a8);--ink3:light-dark(#a1a1a6,#6b6b72);
+--line:light-dark(#e6e6eb,#2a2b31);--soft:light-dark(#f0f0f4,#24252b);
+--green:light-dark(#22a861,#3ccf82);--green-bg:light-dark(#e6f6ed,#132a1d);--green-ink:light-dark(#137a43,#7fe2ad);
+--blue:light-dark(#0a74f0,#4aa3ff);--blue-bg:light-dark(#e8f1fe,#13233a);
+--red:light-dark(#e5382e,#ff6259);--red-bg:light-dark(#fdeceb,#3a1817);
+--amber:light-dark(#e58a00,#ffb340);
+--shadow:0 1px 2px rgba(0,0,0,.04),0 6px 24px light-dark(rgba(20,20,40,.06),rgba(0,0,0,.35));
+--r:22px;--r2:16px;--nav:68px;
+--font:'Inter',-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',Roboto,system-ui,sans-serif}
+:root[data-mode=light]{color-scheme:light}:root[data-mode=dark]{color-scheme:dark}
+:root[data-mode=system][data-theme=dark]{color-scheme:dark}:root[data-mode=system][data-theme=light]{color-scheme:light}
+*{box-sizing:border-box;min-width:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 var(--font);overflow-x:clip;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;padding:0}
+input,select{font:inherit;color:inherit}
+h1,h2,h3,p{margin:0}
+svg.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.sm svg.i,svg.i.sm{width:18px;height:18px}
+
+/* layout */
+#app{min-height:100%}
+.shell{display:flex;min-height:100vh}
+.main{flex:1;padding:max(18px,env(safe-area-inset-top)) 18px calc(var(--nav) + 28px + env(safe-area-inset-bottom));max-width:1100px;margin:0 auto;width:100%}
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;justify-content:space-around;padding:6px 6px calc(6px + env(safe-area-inset-bottom));background:light-dark(rgba(255,255,255,.86),rgba(24,25,29,.86));backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-top:1px solid var(--line)}
+.nav button{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 2px;border-radius:12px;color:var(--ink3);font-size:11px;font-weight:600;min-height:52px;transition:color .2s}
+.nav button.on{color:var(--blue)}
+.nav button:active{transform:scale(.94)}
+.brand-side{display:none}
+@media(min-width:900px){
+ .nav{position:sticky;top:0;bottom:auto;height:100vh;width:236px;flex-direction:column;justify-content:flex-start;gap:4px;padding:26px 14px;border-top:0;border-right:1px solid var(--line)}
+ .nav button{flex:none;flex-direction:row;gap:12px;font-size:15px;padding:11px 14px;min-height:44px;justify-content:flex-start}
+ .nav button.on{background:var(--blue-bg)}
+ .brand-side{display:flex;align-items:center;gap:10px;padding:0 10px 22px;font-weight:800;letter-spacing:.02em;font-size:15px;color:var(--ink)}
+ .main{padding:34px 40px 60px}
+ .top .logo{visibility:hidden}
+}
+
+/* generic */
+.card{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow)}
+.row{display:flex;align-items:center;gap:12px}
+.between{justify-content:space-between}
+.muted{color:var(--ink2)}
+.tiny{font-size:13px;color:var(--ink2)}
+.h1{font-size:clamp(30px,6vw,44px);line-height:1.06;font-weight:800;letter-spacing:-.025em;text-wrap:balance}
+.h2{font-size:22px;line-height:1.2;font-weight:750;letter-spacing:-.015em}
+.h3{font-size:17px;font-weight:700;letter-spacing:-.01em}
+.btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 22px;border-radius:14px;font-weight:650;font-size:16px;background:var(--blue);color:#fff;transition:transform .12s,filter .2s,opacity .2s}
+.btn:hover{filter:brightness(1.06)}.btn:active{transform:scale(.97)}
+.btn.green{background:var(--green)}.btn.red{background:var(--red)}
+.btn.ghost{background:var(--soft);color:var(--ink)}
+.btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn.wide{width:100%}
+.btn:disabled{opacity:.4;pointer-events:none}
+.btn.small{min-height:38px;padding:0 14px;font-size:14px;border-radius:11px}
+.icon-btn{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--soft);color:var(--ink);transition:transform .12s}
+.icon-btn:active{transform:scale(.92)}
+:focus-visible{outline:3px solid color-mix(in srgb,var(--blue) 55%,transparent);outline-offset:2px}
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:650;padding:4px 10px;border-radius:99px;background:var(--soft);color:var(--ink2);white-space:nowrap}
+.pill.green{background:var(--green-bg);color:var(--green-ink)}
+.pill.blue{background:var(--blue-bg);color:var(--blue)}
+.pill.red{background:var(--red-bg);color:var(--red)}
+.bar{height:8px;border-radius:9px;background:var(--soft);overflow:hidden}
+.bar>i{display:block;height:100%;width:0;border-radius:9px;background:var(--green);transition:width .9s cubic-bezier(.2,.8,.2,1)}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+.sec-gap{margin-top:28px}
+.fade-in{animation:fadeUp .45s cubic-bezier(.2,.8,.2,1) both}
+.stagger>*{animation:fadeUp .5s cubic-bezier(.2,.8,.2,1) both}
+.stagger>*:nth-child(2){animation-delay:.05s}.stagger>*:nth-child(3){animation-delay:.1s}.stagger>*:nth-child(4){animation-delay:.15s}.stagger>*:nth-child(5){animation-delay:.2s}.stagger>*:nth-child(6){animation-delay:.25s}.stagger>*:nth-child(7){animation-delay:.3s}.stagger>*:nth-child(8){animation-delay:.35s}.stagger>*:nth-child(9){animation-delay:.4s}.stagger>*:nth-child(10){animation-delay:.45s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes pop{0%{transform:scale(.9)}55%{transform:scale(1.05)}100%{transform:scale(1)}}
+@keyframes shake{0%,100%{transform:none}20%{transform:translateX(-8px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(3px)}}
+@keyframes slideIn{from{opacity:0;transform:translateX(34px)}to{opacity:1;transform:none}}
+@keyframes sheet{from{transform:translateY(100%)}to{transform:none}}
+@keyframes unlock{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--green) 60%,transparent)}100%{box-shadow:0 0 0 18px transparent}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+@keyframes confetti{0%{transform:translateY(-20px) rotate(0);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:.8}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* home */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.03em;font-size:15px}
+.logo-mark{width:36px;height:36px;border-radius:11px;background:var(--ink);color:var(--bg);display:grid;place-items:center}
+.logo-mark svg{width:20px;height:20px}
+.logo-mark{overflow:hidden;background:#1673F0;color:#fff}.logo-mark img{width:100%;height:100%;display:block}
+.streak{display:flex;align-items:center;gap:6px;font-weight:700;font-size:14px;padding:7px 12px;border-radius:99px;background:var(--card);box-shadow:var(--shadow)}
+.streak svg{color:var(--amber);width:18px;height:18px}
+.hero{padding:26px 22px;display:grid;gap:22px;grid-template-columns:minmax(0,1fr)}
+.hero .greet{font-size:15px;font-weight:600;color:var(--ink2)}
+@media(min-width:720px){.hero{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);align-items:center;padding:34px}}
+.ring-wrap{display:flex;align-items:center;gap:18px}
+.ring{position:relative;width:118px;height:118px;flex:none}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:10}
+.ring .bg{stroke:var(--soft)}.ring .fg{stroke:var(--green);stroke-linecap:round;transition:stroke-dashoffset 1.2s cubic-bezier(.2,.8,.2,1)}
+.ring b{position:absolute;inset:0;display:grid;place-items:center;font-size:26px;font-weight:800;letter-spacing:-.02em}
+.ring b small{display:block;font-size:11px;font-weight:600;color:var(--ink2);text-align:center;margin-top:-26px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.stat{background:var(--card2);border-radius:var(--r2);padding:12px;box-shadow:inset 0 0 0 1px var(--line)}
+.stat b{display:block;font-size:22px;font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.stat span{font-size:12px;color:var(--ink2);font-weight:600}
+.continue{display:flex;align-items:center;gap:16px;padding:16px;margin-top:16px;width:100%;text-align:left;background:var(--ink);color:var(--bg);border-radius:var(--r);transition:transform .15s}
+.continue:active{transform:scale(.985)}
+.continue .ci{width:54px;height:54px;border-radius:15px;background:color-mix(in srgb,var(--bg) 14%,transparent);display:grid;place-items:center;font-size:28px;flex:none}
+.continue .ct{flex:1}.continue .ct small{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;opacity:.65}
+.continue .ct b{font-size:17px}.continue .ct span{display:block;font-size:13px;opacity:.7}
+.continue .go{width:42px;height:42px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;flex:none}
+.reminder{display:flex;gap:12px;align-items:center;padding:14px 16px;margin-top:14px;border-radius:var(--r2);background:var(--blue-bg);color:var(--ink);font-size:14px}
+.reminder svg{color:var(--blue)}
+
+/* section cards */
+.sec-card{overflow:hidden;display:flex;flex-direction:column;text-align:left;transition:transform .2s,box-shadow .2s;width:100%}
+.sec-card:hover{transform:translateY(-3px)}
+.sec-art{height:150px;position:relative;overflow:hidden}
+.sec-art svg{position:absolute;inset:0;width:100%;height:100%}
+.sec-body{padding:18px 20px 20px;display:grid;gap:10px}
+.sec-body .meta{display:flex;flex-wrap:wrap;gap:6px}
+.locked{opacity:.62}
+.lock-badge{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.45);color:#fff;display:grid;place-items:center;backdrop-filter:blur(6px)}
+
+/* section page */
+.back{display:inline-flex;align-items:center;gap:4px;font-weight:600;color:var(--blue);min-height:44px;margin-bottom:6px}
+.sec-head{overflow:hidden}
+.sec-head .sec-art{height:170px}
+.sec-head .in{padding:20px 22px 22px;display:grid;gap:12px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.lesson{overflow:hidden;display:flex;flex-direction:column;text-align:left;width:100%;transition:transform .2s}
+.lesson:not(.locked):hover{transform:translateY(-3px)}
+.lesson.unlock-anim{animation:unlock 1.2s ease-out 3,pop .6s}
+.les-art{height:118px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(135deg,light-dark(hsl(var(--h) 85% 93%),hsl(var(--h) 32% 21%)),light-dark(hsl(calc(var(--h) + 38) 78% 86%),hsl(calc(var(--h) + 38) 30% 14%)))}
+.les-art .e1{font-size:54px;filter:drop-shadow(0 8px 12px rgba(0,0,0,.18));z-index:1}
+.les-art .e2,.les-art .e3{position:absolute;font-size:30px;opacity:.9}
+.les-art .e2{left:16%;top:20%;transform:rotate(-12deg)}.les-art .e3{right:15%;bottom:16%;transform:rotate(10deg)}
+.les-art .num{position:absolute;left:14px;top:12px;font-size:12px;font-weight:800;letter-spacing:.05em;color:light-dark(rgba(0,0,0,.6),rgba(255,255,255,.85));background:light-dark(rgba(255,255,255,.72),rgba(0,0,0,.35));padding:3px 9px;border-radius:99px}
+.les-body{padding:16px 18px 18px;display:grid;gap:9px;flex:1}
+.les-body .foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:4px}
+.les-body .foot .tiny{white-space:nowrap}
+
+/* lesson intro */
+.stages{display:grid;gap:10px}
+.stage{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:var(--r2);background:var(--card2);box-shadow:inset 0 0 0 1px var(--line)}
+.stage .dot{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--soft);font-weight:800;font-size:14px;flex:none;color:var(--ink2)}
+.stage.done .dot{background:var(--green);color:#fff}
+.stage.cur{box-shadow:inset 0 0 0 2px var(--blue)}.stage.cur .dot{background:var(--blue);color:#fff}
+.wordlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));gap:8px}
+.wordlist div{padding:10px 12px;border-radius:12px;background:var(--card2);box-shadow:inset 0 0 0 1px var(--line);font-size:14px}
+.wordlist b{display:block;font-weight:650}
+.wordlist span{color:var(--ink2);font-size:13px}
+
+/* session */
+.session{position:fixed;inset:0;z-index:40;background:var(--bg);display:flex;flex-direction:column;overflow-y:auto}
+.s-top{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:12px;padding:max(12px,env(safe-area-inset-top)) 16px 12px;background:var(--bg);max-width:760px;width:100%;margin:0 auto}
+.s-top .bar{flex:1;height:10px}
+.s-top .cnt{font-size:13px;font-weight:700;color:var(--ink2);white-space:nowrap}
+.s-label{max-width:760px;width:100%;margin:0 auto;padding:0 18px;display:flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--ink2)}
+.s-body{flex:1;max-width:760px;width:100%;margin:0 auto;padding:14px 18px 150px;display:flex;flex-direction:column}
+.s-foot{position:fixed;left:0;right:0;bottom:0;z-index:3;padding:14px 18px calc(14px + env(safe-area-inset-bottom));background:linear-gradient(transparent,var(--bg) 26%)}
+.s-foot .in{max-width:724px;margin:0 auto;display:flex;gap:10px}
+.s-foot .in .btn{flex:1}
+.study{padding:30px 22px;text-align:center;display:grid;gap:14px;justify-items:center;animation:slideIn .4s cubic-bezier(.2,.8,.2,1) both}
+.study .em{font-size:84px;line-height:1;filter:drop-shadow(0 10px 16px rgba(0,0,0,.14))}
+.study .en{font-size:clamp(32px,8vw,48px);font-weight:800;letter-spacing:-.025em;line-height:1.08;text-wrap:balance}
+.study.sent .en{font-size:clamp(26px,6vw,36px)}
+.study .ru{font-size:20px;color:var(--ink2);font-weight:500;text-wrap:balance}
+.study .ru.hid{filter:blur(8px);user-select:none;cursor:pointer}
+.audio-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.audio{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 18px;border-radius:99px;background:var(--blue-bg);color:var(--blue);font-weight:650;font-size:15px;transition:transform .12s}
+.audio:active{transform:scale(.95)}
+.audio.speaking svg{animation:pulse .6s ease-in-out infinite}
+.audio.big{width:96px;height:96px;padding:0;justify-content:center;border-radius:50%}
+.audio.big svg{width:40px;height:40px}
+.q{display:grid;gap:18px;animation:slideIn .35s cubic-bezier(.2,.8,.2,1) both}
+.q .ask{font-size:14px;font-weight:700;color:var(--ink2)}
+.q .prompt{font-size:clamp(28px,7vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.12;text-wrap:balance}
+.q .prompt.ru{font-weight:700}
+.q .prompt.sent{font-size:clamp(22px,5.4vw,30px)}
+.q .pic{font-size:96px;line-height:1.1;text-align:center}
+.q .center{display:flex;justify-content:center;padding:8px 0}
+.opts{display:grid;gap:10px}
+@media(min-width:600px){.opts.two{grid-template-columns:1fr 1fr}}
+.opt{min-height:58px;padding:14px 18px;border-radius:var(--r2);background:var(--card);box-shadow:var(--shadow),inset 0 0 0 1.5px var(--line);text-align:left;font-size:17px;font-weight:600;display:flex;align-items:center;gap:12px;transition:transform .1s,background .2s,box-shadow .2s}
+.opt kbd{font:700 12px var(--font);width:24px;height:24px;border-radius:7px;display:grid;place-items:center;background:var(--soft);color:var(--ink2);flex:none}
+.opt:active{transform:scale(.98)}
+.opt.ok{background:var(--green-bg);box-shadow:inset 0 0 0 2px var(--green);color:var(--green-ink);animation:pop .4s}
+.opt.bad{background:var(--red-bg);box-shadow:inset 0 0 0 2px var(--red);color:var(--red);animation:shake .45s}
+.opts.done .opt{pointer-events:none}
+.field{width:100%;min-height:58px;padding:14px 18px;border-radius:var(--r2);border:0;background:var(--card);box-shadow:var(--shadow),inset 0 0 0 1.5px var(--line);font-size:19px;font-weight:600;outline:0;transition:box-shadow .2s}
+.field:focus{box-shadow:var(--shadow),inset 0 0 0 2px var(--blue)}
+.field.ok{box-shadow:inset 0 0 0 2px var(--green);background:var(--green-bg)}
+.field.bad{box-shadow:inset 0 0 0 2px var(--red);background:var(--red-bg);animation:shake .45s}
+.hintline{font-size:15px;color:var(--ink2);letter-spacing:.12em;font-weight:700;text-align:center}
+.build-ans{min-height:76px;padding:12px;border-radius:var(--r2);background:var(--card);box-shadow:inset 0 0 0 1.5px var(--line);display:flex;flex-wrap:wrap;gap:8px;align-content:flex-start;transition:box-shadow .2s}
+.build-ans.ok{box-shadow:inset 0 0 0 2px var(--green);background:var(--green-bg)}
+.build-ans.bad{box-shadow:inset 0 0 0 2px var(--red);background:var(--red-bg);animation:shake .45s}
+.build-ans:empty::before{content:attr(data-ph);color:var(--ink3);font-size:15px;padding:8px 4px}
+.bank{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.tile{min-height:46px;padding:0 15px;border-radius:12px;background:var(--card);box-shadow:var(--shadow),inset 0 0 0 1.5px var(--line),0 3px 0 var(--line);font-weight:650;font-size:17px;transition:transform .12s,opacity .2s}
+.tile:active{transform:translateY(2px)}
+.tile.used{opacity:0;pointer-events:none}
+.match{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.match .col{display:grid;gap:10px;align-content:start}
+.mt{min-height:56px;padding:10px 12px;border-radius:14px;background:var(--card);box-shadow:var(--shadow),inset 0 0 0 1.5px var(--line);font-weight:650;font-size:16px;transition:all .2s}
+.mt.sel{box-shadow:inset 0 0 0 2px var(--blue);background:var(--blue-bg);color:var(--blue)}
+.mt.ok{box-shadow:inset 0 0 0 2px var(--green);background:var(--green-bg);color:var(--green-ink);pointer-events:none;opacity:.75}
+.mt.bad{box-shadow:inset 0 0 0 2px var(--red);background:var(--red-bg);animation:shake .4s}
+.gap-text{font-size:clamp(22px,5.6vw,30px);font-weight:750;line-height:1.3;letter-spacing:-.01em}
+.gap-text u{text-decoration:none;display:inline-block;min-width:90px;border-bottom:3px solid var(--blue);color:var(--blue);margin:0 4px}
+.flash{perspective:1200px;min-height:300px;cursor:pointer}
+.flash .fl{position:relative;width:100%;min-height:300px;transition:transform .6s cubic-bezier(.2,.8,.2,1);transform-style:preserve-3d}
+.flash.flipped .fl{transform:rotateY(180deg)}
+.flash .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:grid;place-items:center;align-content:center;gap:12px;padding:26px;text-align:center}
+.flash .rear{transform:rotateY(180deg)}
+.feedback{position:fixed;left:0;right:0;bottom:0;z-index:5;padding:18px 18px calc(16px + env(safe-area-inset-bottom));animation:sheet .32s cubic-bezier(.2,.8,.2,1) both;border-radius:24px 24px 0 0}
+.feedback.ok{background:var(--green-bg)}.feedback.bad{background:var(--red-bg)}
+.feedback .in{max-width:724px;margin:0 auto;display:grid;gap:12px}
+.feedback .t{display:flex;align-items:center;gap:10px;font-size:19px;font-weight:800}
+.feedback.ok .t{color:var(--green-ink)}.feedback.bad .t{color:var(--red)}
+.feedback .t .bub{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#fff;animation:pop .4s}
+.feedback.ok .bub{background:var(--green)}.feedback.bad .bub{background:var(--red)}
+.feedback .ans{font-size:16px;font-weight:600}
+.feedback .ans small{display:block;font-weight:500;color:var(--ink2);font-size:14px}
+
+/* results */
+.result{text-align:center;display:grid;gap:18px;justify-items:center;padding:20px 0}
+.result .big{font-size:64px;font-weight:850;letter-spacing:-.04em;line-height:1}
+.result .ring{width:170px;height:170px}
+.result .ring b{font-size:40px}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;width:100%}
+.misslist{display:grid;gap:8px;width:100%;text-align:left}
+.miss{padding:12px 14px;border-radius:14px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line);display:flex;justify-content:space-between;gap:10px;align-items:center}
+.miss b{font-weight:700}.miss span{color:var(--ink2);font-size:14px;text-align:right}
+.confetti{position:fixed;inset:0;pointer-events:none;z-index:60;overflow:hidden}
+.confetti i{position:absolute;top:-20px;width:9px;height:14px;border-radius:2px;animation:confetti linear forwards}
+
+/* review / progress / settings */
+.modes{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,150px),1fr));gap:10px}
+.mode{padding:16px;border-radius:var(--r2);background:var(--card);box-shadow:var(--shadow);text-align:left;display:grid;gap:8px;transition:transform .15s,box-shadow .2s}
+.mode:active{transform:scale(.97)}
+.mode .mi{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--blue-bg);color:var(--blue)}
+.mode b{font-size:15px}.mode span{font-size:12.5px;color:var(--ink2);line-height:1.35}
+.seg{display:inline-flex;padding:3px;border-radius:12px;background:var(--soft);gap:2px;flex-wrap:wrap}
+.seg button{min-height:38px;padding:0 14px;border-radius:9px;font-size:14px;font-weight:650;color:var(--ink2)}
+.seg button.on{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.list{overflow:hidden}
+.li{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;padding:14px 18px;min-height:60px;border-bottom:1px solid var(--line)}
+.li:last-child{border-bottom:0}
+.li .lt b{display:block;font-weight:600;font-size:15.5px}.li .lt span{font-size:13px;color:var(--ink2)}
+.switch{width:52px;height:32px;border-radius:99px;background:var(--line);position:relative;flex:none;transition:background .2s}
+.switch::after{content:'';position:absolute;top:3px;left:3px;width:26px;height:26px;border-radius:50%;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.2);transition:transform .25s cubic-bezier(.2,.8,.2,1)}
+.switch.on{background:var(--green)}.switch.on::after{transform:translateX(20px)}
+input[type=range]{accent-color:var(--blue);width:140px;height:32px}
+input[type=time],select{min-height:40px;border-radius:10px;border:0;background:var(--soft);padding:0 10px;font-size:15px}
+.lgrid{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:6px}
+.lgrid i{aspect-ratio:1;border-radius:8px;background:var(--soft);display:grid;place-items:center;font-size:11px;font-style:normal;font-weight:700;color:var(--ink3)}
+.lgrid i.d{background:var(--green);color:#fff}.lgrid i.p{background:var(--blue-bg);color:var(--blue)}
+.hist{display:grid;gap:6px}
+.hist div{display:flex;justify-content:space-between;gap:10px;font-size:14px;padding:9px 0;border-bottom:1px solid var(--line)}
+.modal-bg{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.38);display:grid;place-items:center;padding:20px;animation:fadeUp .2s both}
+.modal{max-width:400px;width:100%;padding:24px;display:grid;gap:14px;text-align:center}
+.toast{position:fixed;left:50%;bottom:calc(var(--nav) + 20px);transform:translateX(-50%);z-index:90;background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:14px;font-size:14px;font-weight:600;max-width:calc(100vw - 32px);animation:fadeUp .3s both;box-shadow:var(--shadow)}
+@media(min-width:900px){.toast{bottom:30px}}
+.empty{padding:34px 22px;text-align:center;display:grid;gap:10px;justify-items:center}
+.empty .em{font-size:54px}
+.warn{padding:12px 16px;border-radius:14px;background:var(--red-bg);color:var(--red);font-size:14px;margin-bottom:14px}
+
+/* travel mode */
+.trav{margin-top:16px;padding:18px 20px;display:grid;gap:14px}
+.trav.off{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.trav-ic{font-size:40px;line-height:1}
+.trav.on{background:linear-gradient(135deg,var(--card),light-dark(#eaf7ef,#13261b));box-shadow:var(--shadow),inset 0 0 0 1.5px color-mix(in srgb,var(--green) 35%,transparent)}
+.woh{display:flex;gap:16px;align-items:center}
+.woh-em{font-size:58px;line-height:1;flex:none;filter:drop-shadow(0 8px 12px rgba(0,0,0,.15))}
+.woh-en{font-size:clamp(28px,6vw,38px);font-weight:850;letter-spacing:-.02em;line-height:1.05}
+.woh-ru{font-size:18px;font-weight:650;color:var(--green-ink)}
+.steps{margin:0;padding-left:22px;display:grid;gap:8px;font-size:15px}
+.steps li::marker{font-weight:800;color:var(--blue)}
+a.btn{text-decoration:none}
+
+</style>
+</head>
+<body>
+<div id="app"><noscript>TRAVEL ENGLISH requires JavaScript.</noscript></div>
+<script type="text/plain" id="widget-src">
+// TRAVEL ENGLISH — Word of the Hour
+// Виджет для экрана блокировки и домашнего экрана iPhone (приложение Scriptable).
+// Каждый час — новое слово: английский, перевод и значение.
+// Нажмите на виджет или запустите скрипт, чтобы включить «✈️ Я улетел» или выключить «🏠 Я прилетел обратно».
+// Ссылки: scriptable:///run/Travel%20English?mode=on  /  ?mode=off
+// icon-color: deep-green; icon-glyph: plane;
+
+const WORDS = [
+  ["Airport","аэропорт","место, откуда летают самолёты","✈️"],
+  ["Passport","паспорт","документ для поездок за границу","🛂"],
+  ["Ticket","билет","даёт право на поездку или вход","🎫"],
+  ["Flight","рейс","перелёт на самолёте","✈️"],
+  ["Plane","самолёт","летит по воздуху с пассажирами","🛩️"],
+  ["Luggage","багаж","все ваши вещи в поездке","✈️"],
+  ["Suitcase","чемодан","большая сумка на колёсах","🧳"],
+  ["Boarding","посадка","вход пассажиров в самолёт","✈️"],
+  ["Gate","выход на посадку","где садятся на свой рейс","🚪"],
+  ["Departure","отправление","время и место отлёта","🛫"],
+  ["Arrival","прибытие","когда вы прилетаете","🛬"],
+  ["Security","досмотр","проверка вещей и людей","🛡️"],
+  ["Check-in","регистрация","оформление на рейс или в отеле","✅"],
+  ["Seat","место","ваше место в самолёте","💺"],
+  ["Window","окно","место у иллюминатора","🪟"],
+  ["Aisle","проход","проход между рядами кресел","✈️"],
+  ["Delay","задержка","рейс вылетает позже","⏳"],
+  ["Cancel","отменять","отменить, например рейс","❌"],
+  ["Terminal","терминал","здание аэропорта","🏢"],
+  ["Pilot","пилот","человек, который ведёт самолёт","👨‍✈️"],
+  ["Hotel","гостиница","место, где живут в поездке","🏨"],
+  ["Room","номер","ваш номер в отеле","🏨"],
+  ["Reservation","бронирование","заранее заказанный номер или стол","📋"],
+  ["Reception","стойка регистрации","стойка, где встречают гостей","🛎️"],
+  ["Key","ключ","открывает дверь номера","🔑"],
+  ["Bed","кровать","на ней спят","🛏️"],
+  ["Towel","полотенце","им вытираются после душа","🏨"],
+  ["Pillow","подушка","под голову во время сна","🏨"],
+  ["Blanket","одеяло","укрывает, когда холодно","🏨"],
+  ["Shower","душ","моются под струёй воды","🚿"],
+  ["Bathroom","ванная","комната с душем и туалетом","🛁"],
+  ["Breakfast","завтрак","утренняя еда","🍳"],
+  ["Elevator","лифт","поднимает на нужный этаж","🛗"],
+  ["Floor","этаж","уровень здания: 1-й, 2-й…","🏨"],
+  ["Stay","пребывание","время проживания","🏨"],
+  ["Guest","гость","тот, кто живёт в отеле","🧑‍💼"],
+  ["Single","одноместный","номер для одного","🏨"],
+  ["Double","двухместный","номер для двоих","🏨"],
+  ["Wi-Fi","вай-фай","беспроводной интернет","📶"],
+  ["Checkout","выезд","выезд из отеля","🧾"],
+  ["Restaurant","ресторан","место, где едят и заказывают блюда","🍽️"],
+  ["Menu","меню","список блюд и цен","📜"],
+  ["Waiter","официант","приносит заказ к столу","🤵"],
+  ["Table","столик","стол, за которым едят","🍽️"],
+  ["Order","заказ","то, что вы попросили принести","📝"],
+  ["Bill","счёт","сумма к оплате","🧾"],
+  ["Tip","чаевые","деньги сверху за обслуживание","🍽️"],
+  ["Water","вода","без газа или с газом","💧"],
+  ["Coffee","кофе","горячий бодрящий напиток","☕"],
+  ["Tea","чай","горячий напиток из листьев","🍵"],
+  ["Juice","сок","напиток из фруктов","🧃"],
+  ["Bread","хлеб","подают к любому блюду","🍞"],
+  ["Meat","мясо","говядина, баранина и др.","🥩"],
+  ["Chicken","курица","птица, популярное блюдо","🍗"],
+  ["Fish","рыба","блюдо из моря или реки","🐟"],
+  ["Salad","салат","смесь овощей","🥗"],
+  ["Soup","суп","первое блюдо","🍲"],
+  ["Dessert","десерт","сладкое в конце еды","🍰"],
+  ["Vegetarian","вегетарианский","без мяса и рыбы","🥦"],
+  ["Spicy","острый","с острым перцем","🌶️"],
+  ["Left","налево","в сторону левой руки","⬅️"],
+  ["Right","направо","в сторону правой руки","➡️"],
+  ["Straight","прямо","вперёд, не поворачивая","⬆️"],
+  ["Street","улица","дорога с домами по бокам","🛣️"],
+  ["Corner","угол","где сходятся две улицы","🗺️"],
+  ["Map","карта","схема города или местности","🗺️"],
+  ["Near","рядом","на небольшом расстоянии","🗺️"],
+  ["Far","далеко","на большом расстоянии","🗺️"],
+  ["Here","здесь","в этом месте","📍"],
+  ["There","там","в том месте","🗺️"],
+  ["North","север","направление по компасу вверх","🧭"],
+  ["South","юг","направление по компасу вниз","🗺️"],
+  ["Crossroads","перекрёсток","где пересекаются дороги","🚦"],
+  ["Bridge","мост","переход через реку","🌉"],
+  ["Square","площадь","открытая площадь в городе","🗺️"],
+  ["Building","здание","дом, сооружение","🏢"],
+  ["Entrance","вход","куда входят","🗺️"],
+  ["Exit","выход","откуда выходят","🚪"],
+  ["Address","адрес","улица и номер дома","🏠"],
+  ["Park","парк","зелёная зона для отдыха","🌳"],
+  ["Taxi","такси","машина с водителем за плату","🚕"],
+  ["Bus","автобус","большой транспорт по маршруту","🚌"],
+  ["Train","поезд","едет по рельсам","🚆"],
+  ["Metro","метро","подземный городской поезд","🚇"],
+  ["Station","станция","где садятся на поезд","🚉"],
+  ["Stop","остановка","где останавливается автобус","🚏"],
+  ["Car","машина","легковой автомобиль","🚗"],
+  ["Bicycle","велосипед","двухколёсный, крутишь педали","🚲"],
+  ["Driver","водитель","тот, кто ведёт машину","🚕"],
+  ["Fare","стоимость проезда","цена поездки","🚕"],
+  ["Platform","платформа","где ждут поезд","🚕"],
+  ["Route","маршрут","путь от А до Б","🚕"],
+  ["Schedule","расписание","время отправлений","🗓️"],
+  ["Ferry","паром","судно для людей и машин","⛴️"],
+  ["Boat","лодка","небольшое судно","🚤"],
+  ["Rent","аренда","взять на время за деньги","🚕"],
+  ["Parking","парковка","место для машин","🅿️"],
+  ["Fuel","топливо","бензин для машины","⛽"],
+  ["Seatbelt","ремень безопасности","пристегнитесь в машине","🚕"],
+  ["Transfer","пересадка","пересадка или трансфер","🔄"],
+  ["Shop","магазин","где покупают товары","🏬"],
+  ["Market","рынок","торговля под открытым небом","🛍️"],
+  ["Price","цена","сколько стоит товар","🏷️"],
+  ["Size","размер","S, M, L — размер одежды","📏"],
+  ["Small","маленький","маленький по размеру","🛍️"],
+  ["Large","большой","большой по размеру","🛍️"],
+  ["Clothes","одежда","то, что носят","👕"],
+  ["Shoes","обувь","надевают на ноги","👟"],
+  ["Bag","сумка","в ней носят вещи","👜"],
+  ["Gift","подарок","то, что дарят другим","🎁"],
+  ["Souvenir","сувенир","память о поездке","🗿"],
+  ["Cheap","дешёвый","стоит мало","🛍️"],
+  ["Expensive","дорогой","стоит много","💎"],
+  ["Discount","скидка","снижение цены","🛍️"],
+  ["Sale","распродажа","период низких цен","🛍️"],
+  ["Receipt","чек","бумага об оплате","🧾"],
+  ["Fitting room","примерочная","где примеряют одежду","🛍️"],
+  ["Open","открыто","работает сейчас","🔓"],
+  ["Closed","закрыто","сейчас не работает","🔒"],
+  ["Buy","покупать","отдать деньги за товар","🛒"],
+  ["Money","деньги","наличные и деньги на карте","💰"],
+  ["Cash","наличные","бумажные деньги и монеты","💵"],
+  ["Card","карта","банковская карта для оплаты","💳"],
+  ["Bank","банк","хранит и выдаёт деньги","🏦"],
+  ["ATM","банкомат","автомат для снятия наличных","🏧"],
+  ["Coin","монета","металлические деньги","🪙"],
+  ["Currency","валюта","деньги страны: $, €, сум","💱"],
+  ["Exchange","обмен","поменять одни деньги на другие","💳"],
+  ["Rate","курс","сколько стоит валюта","📈"],
+  ["Pay","платить","отдать деньги","💳"],
+  ["Change","сдача","деньги, которые вам вернули","💳"],
+  ["Fee","комиссия","плата за услугу","💳"],
+  ["Dollar","доллар","валюта США","💲"],
+  ["Euro","евро","валюта Европы","💶"],
+  ["Wallet","кошелёк","для денег и карт","👛"],
+  ["Account","банковский счёт","ваши деньги в банке","💳"],
+  ["PIN","пин-код","секретный код карты","🔢"],
+  ["Cost","стоимость","цена чего-либо","💳"],
+  ["Refund","возврат денег","возврат ваших денег","💳"],
+  ["Tax","налог","обязательный платёж государству","💳"],
+  ["Help","помощь","кричат, когда нужна помощь","🆘"],
+  ["Doctor","врач","лечит людей","🧑‍⚕️"],
+  ["Hospital","больница","где лечат больных","🏥"],
+  ["Pharmacy","аптека","где продают лекарства","🚑"],
+  ["Medicine","лекарство","помогает при болезни","💊"],
+  ["Police","полиция","следит за порядком","🚓"],
+  ["Ambulance","скорая помощь","медицинская машина","🚑"],
+  ["Fire","пожар","огонь, опасность","🔥"],
+  ["Pain","боль","когда что-то болит","🚑"],
+  ["Sick","больной","плохо себя чувствует","🤒"],
+  ["Allergy","аллергия","реакция на еду или пыльцу","🤧"],
+  ["Injury","травма","повреждение тела","🩹"],
+  ["Accident","авария","неожиданная авария","💥"],
+  ["Danger","опасность","может причинить вред","⚠️"],
+  ["Safe","безопасный","без опасности","🚑"],
+  ["Lost","потерянный","не можешь найти вещь или дорогу","🚑"],
+  ["Thief","вор","крадёт чужие вещи","🦹"],
+  ["Embassy","посольство","представительство вашей страны","🏛️"],
+  ["Insurance","страховка","оплатит лечение и потери","📄"],
+  ["Fever","температура","высокая температура тела","🌡️"],
+  ["Hello","привет","так здороваются","👋"],
+  ["Goodbye","до свидания","так прощаются","👋"],
+  ["Please","пожалуйста","вежливое слово при просьбе","🙏"],
+  ["Thank you","спасибо","так благодарят","👋"],
+  ["Sorry","извините","так извиняются","👋"],
+  ["Yes","да","согласие","👍"],
+  ["No","нет","отказ","👎"],
+  ["Friend","друг","близкий человек","🤝"],
+  ["Name","имя","как вас зовут","📛"],
+  ["Man","мужчина","взрослый мужчина","👨"],
+  ["Woman","женщина","взрослая женщина","👩"],
+  ["Child","ребёнок","ребёнок","🧒"],
+  ["Family","семья","родители, дети, родные","👪"],
+  ["Question","вопрос","то, что спрашивают","❓"],
+  ["Answer","ответ","то, что отвечают","👋"],
+  ["Understand","понимать","понимать смысл","👋"],
+  ["Speak","говорить","говорить словами","🗣️"],
+  ["Language","язык","английский, русский и др.","🌐"],
+  ["Phone","телефон","для звонков и сообщений","📱"],
+  ["Message","сообщение","короткий текст другому","💬"],
+  ["Time","время","часы и минуты","⌚"],
+  ["Today","сегодня","этот день","🎒"],
+  ["Tomorrow","завтра","следующий день","🎒"],
+  ["Yesterday","вчера","прошлый день","🎒"],
+  ["Day","день","светлое время суток","☀️"],
+  ["Night","ночь","тёмное время суток","🌙"],
+  ["Week","неделя","семь дней","📅"],
+  ["Weather","погода","солнце, дождь, ветер","⛅"],
+  ["Charger","зарядка","заряжает телефон","🔌"],
+  ["Battery","батарея","питание устройства","🔋"],
+  ["Toilet","туалет","туалет, WC","🚻"],
+  ["Visa","виза","разрешение на въезд в страну","🎒"],
+  ["Tourist","турист","путешественник","📸"],
+  ["Camera","фотоаппарат","для фото и видео","📷"],
+  ["Beach","пляж","берег моря","🏖️"],
+  ["Museum","музей","здание с выставками","🏛️"],
+  ["Trip","поездка","поездка куда-либо","🎒"],
+  ["Information","информация","полезные сведения","ℹ️"],
+  ["Free","бесплатный","бесплатно или свободно","🆓"],
+  ["Umbrella","зонт","защищает от дождя","☂️"]
+];
+
+const fm = FileManager.local();
+const PATH = fm.joinPath(fm.documentsDirectory(), "travel-english-mode.json");
+function getMode() { try { return JSON.parse(fm.readString(PATH)) || { on: false }; } catch (e) { return { on: false }; } }
+function setMode(on) { const m = { on: on, since: on ? Date.now() : null }; fm.writeString(PATH, JSON.stringify(m)); return m; }
+
+// Same formula as in the TRAVEL ENGLISH app, so the word matches everywhere.
+function hourIndex(d) { return Math.floor((d.getTime() / 60000 - d.getTimezoneOffset()) / 60); }
+function wordAt(d) { const n = WORDS.length; return WORDS[((hourIndex(d) * 73) % n + n) % n]; }
+function nextHour() { const d = new Date(); d.setMinutes(0, 0, 0); d.setHours(d.getHours() + 1); return d; }
+function hhmm(d) { return ("0" + d.getHours()).slice(-2) + ":00"; }
+function tripDay(m) { return m.since ? Math.floor((Date.now() - m.since) / 86400000) + 1 : 1; }
+
+const params = args.queryParameters || {};
+if (params.mode === "on") setMode(true);
+if (params.mode === "off") setMode(false);
+let mode = getMode();
+
+function text(stack, value, font, color, lines, scale) {
+  const t = stack.addText(value);
+  t.font = font;
+  if (color) t.textColor = color;
+  if (lines) t.lineLimit = lines;
+  t.minimumScaleFactor = scale || 0.6;
+  return t;
+}
+
+function buildWidget(family) {
+  const w = new ListWidget();
+  w.refreshAfterDate = nextHour();
+  w.url = URLScheme.forRunningScript();
+  const word = wordAt(new Date());
+  const [en, ru, meaning, emoji] = word;
+
+  // ---------- Lock screen ----------
+  if (family === "accessoryInline") {
+    w.addText(mode.on ? emoji + " " + en + " — " + ru : "🏠 Travel English · выкл.");
+    return w;
+  }
+  if (family === "accessoryCircular") {
+    w.addAccessoryWidgetBackground = true;
+    const s = w.addStack(); s.layoutVertically(); s.centerAlignContent();
+    if (mode.on) { text(s, emoji, Font.systemFont(20), null, 1); text(s, en, Font.boldSystemFont(11), null, 1, 0.5); }
+    else { text(s, "🏠", Font.systemFont(22), null, 1); text(s, "выкл.", Font.mediumSystemFont(10), null, 1); }
+    return w;
+  }
+  if (family === "accessoryRectangular") {
+    if (!mode.on) {
+      text(w, "🏠 TRAVEL ENGLISH", Font.boldSystemFont(13), null, 1);
+      text(w, "Режим путешествия выключен", Font.systemFont(12), null, 1);
+      text(w, "Нажмите → ✈️ Я улетел", Font.mediumSystemFont(12), null, 1);
+      return w;
+    }
+    text(w, emoji + " " + en.toUpperCase(), Font.heavySystemFont(16), null, 1, 0.55);
+    text(w, ru, Font.semiboldSystemFont(14), null, 1, 0.6);
+    text(w, meaning, Font.systemFont(12), null, 1, 0.55);
+    return w;
+  }
+
+  // ---------- Home screen (small / medium / large) ----------
+  const g = new LinearGradient();
+  g.colors = [new Color("#1d1d1f"), new Color("#0f2a1c")];
+  g.locations = [0, 1];
+  w.backgroundGradient = g;
+  w.setPadding(14, 16, 14, 16);
+  const green = new Color("#3ccf82"), white = Color.white(), grey = new Color("#a1a1a8");
+  const big = family === "medium" || family === "large";
+
+  const head = w.addStack(); head.centerAlignContent();
+  text(head, "✈️ WORD OF THE HOUR", Font.heavySystemFont(10), green, 1);
+  head.addSpacer();
+  if (mode.on && big) text(head, "День " + tripDay(mode), Font.boldSystemFont(10), grey, 1);
+  w.addSpacer(big ? 8 : 6);
+
+  if (!mode.on) {
+    text(w, "🏠", Font.systemFont(30), null, 1);
+    w.addSpacer(4);
+    text(w, "Режим путешествия выключен", Font.boldSystemFont(14), white, 2);
+    w.addSpacer(2);
+    text(w, "Нажмите, чтобы включить ✈️", Font.systemFont(12), grey, 2);
+    w.addSpacer();
+    return w;
+  }
+
+  const row = w.addStack(); row.centerAlignContent();
+  text(row, emoji, Font.systemFont(big ? 34 : 26), null, 1);
+  row.addSpacer(8);
+  text(row, en, Font.heavySystemFont(big ? 30 : 22), white, 1, 0.5);
+  w.addSpacer(4);
+  text(w, ru, Font.semiboldSystemFont(big ? 18 : 15), green, 1);
+  w.addSpacer(2);
+  text(w, meaning, Font.systemFont(big ? 14 : 12), grey, 2);
+  w.addSpacer();
+  text(w, "Новое слово в " + hhmm(nextHour()), Font.mediumSystemFont(10), grey, 1);
+  return w;
+}
+
+if (config.runsInWidget) {
+  Script.setWidget(buildWidget(config.widgetFamily));
+} else if (params.mode) {
+  // Opened from the TRAVEL ENGLISH app button: just switch and return.
+  Script.complete();
+} else {
+  const a = new Alert();
+  a.title = "✈️ TRAVEL ENGLISH";
+  a.message = mode.on
+    ? "Режим путешествия включён (день " + tripDay(mode) + "). Каждый час на экране блокировки — новое слово."
+    : "Режим путешествия выключен. Включите его, и каждый час будет появляться новое слово.";
+  a.addAction(mode.on ? "🏠 Я прилетел обратно" : "✈️ Я улетел");
+  a.addAction("👀 Слово этого часа");
+  a.addCancelAction("Закрыть");
+  const r = await a.presentSheet();
+  if (r === 0) mode = setMode(!mode.on);
+  if (r === 1) {
+    const [en, ru, meaning, emoji] = wordAt(new Date());
+    const b = new Alert();
+    b.title = emoji + " " + en;
+    b.message = ru + "\n" + meaning + "\n\nСледующее слово в " + hhmm(nextHour());
+    b.addAction("🔊 Произнести");
+    b.addCancelAction("OK");
+    if ((await b.presentAlert()) === 0) Speech.speak(en);
+  }
+  if (r === 0) await buildWidget("medium").presentMedium();
+  Script.complete();
+}
+
+</script>
+<script>
+/* TRAVEL ENGLISH — content. Line format: English|русский;вариант|emoji|alt english;alt */
+const SECTIONS = [
+{ id:'words', title:'ESSENTIAL WORDS', unit:'words', kind:'word',
+  sub:{ru:'200 главных слов для путешествий',en:'200 essential travel words'},
+  desc:{ru:'Learn 200 essential English words for traveling.',en:'Learn 200 essential English words for traveling.'},
+  lessons:[
+{t:'AIRPORT',d:{ru:'Рейсы, багаж, регистрация',en:'Flights, luggage, check-in'},e:['✈️','🧳','🛂'],h:210,items:`
+Airport|аэропорт||
+Passport|паспорт|🛂|
+Ticket|билет|🎫|
+Flight|рейс;полёт|✈️|
+Plane|самолёт|🛩️|airplane;aeroplane
+Luggage|багаж||baggage
+Suitcase|чемодан|🧳|
+Boarding|посадка||
+Gate|выход на посадку;выход|🚪|
+Departure|отправление;вылет|🛫|
+Arrival|прибытие;прилёт|🛬|
+Security|досмотр;безопасность|🛡️|
+Check-in|регистрация|✅|check in;checkin
+Seat|место;сиденье|💺|
+Window|окно|🪟|
+Aisle|проход||
+Delay|задержка|⏳|
+Cancel|отменять;отменить|❌|
+Terminal|терминал|🏢|
+Pilot|пилот|👨‍✈️|`},
+{t:'HOTEL',d:{ru:'Заселение, номер, сервис',en:'Check-in, rooms, service'},e:['🏨','🛏️','🔑'],h:28,items:`
+Hotel|гостиница;отель|🏨|
+Room|номер;комната||
+Reservation|бронирование;бронь|📋|booking
+Reception|стойка регистрации;ресепшн;ресепшен|🛎️|front desk
+Key|ключ|🔑|
+Bed|кровать|🛏️|
+Towel|полотенце||
+Pillow|подушка||
+Blanket|одеяло||
+Shower|душ|🚿|
+Bathroom|ванная;ванная комната;санузел|🛁|
+Breakfast|завтрак|🍳|
+Elevator|лифт|🛗|lift
+Floor|этаж||
+Stay|пребывание;проживание||
+Guest|гость|🧑‍💼|
+Single|одноместный||
+Double|двухместный||
+Wi-Fi|вай-фай;wi-fi;интернет|📶|wifi;wi fi
+Checkout|выезд;выселение|🧾|check-out;check out`},
+{t:'RESTAURANT',d:{ru:'Меню, заказ, еда и напитки',en:'Menu, orders, food & drinks'},e:['🍽️','☕','🍰'],h:12,items:`
+Restaurant|ресторан|🍽️|
+Menu|меню|📜|
+Waiter|официант|🤵|
+Table|столик;стол||
+Order|заказ;заказывать|📝|
+Bill|счёт|🧾|check
+Tip|чаевые||
+Water|вода|💧|
+Coffee|кофе|☕|
+Tea|чай|🍵|
+Juice|сок|🧃|
+Bread|хлеб|🍞|
+Meat|мясо|🥩|
+Chicken|курица|🍗|
+Fish|рыба|🐟|
+Salad|салат|🥗|
+Soup|суп|🍲|
+Dessert|десерт|🍰|
+Vegetarian|вегетарианский;вегетарианец|🥦|
+Spicy|острый|🌶️|hot`},
+{t:'DIRECTIONS',d:{ru:'Улицы, карта, навигация',en:'Streets, maps, navigation'},e:['🗺️','🧭','📍'],h:160,items:`
+Left|налево;левый;слева|⬅️|
+Right|направо;правый;справа|➡️|
+Straight|прямо|⬆️|
+Street|улица|🛣️|
+Corner|угол||
+Map|карта|🗺️|
+Near|рядом;близко||
+Far|далеко||
+Here|здесь;тут|📍|
+There|там||
+North|север|🧭|
+South|юг||
+Crossroads|перекрёсток|🚦|intersection
+Bridge|мост|🌉|
+Square|площадь||
+Building|здание|🏢|
+Entrance|вход||
+Exit|выход|🚪|way out
+Address|адрес|🏠|
+Park|парк|🌳|`},
+{t:'TRANSPORT',d:{ru:'Такси, автобус, метро, поезд',en:'Taxi, bus, metro, trains'},e:['🚕','🚆','🚌'],h:45,items:`
+Taxi|такси|🚕|cab
+Bus|автобус|🚌|
+Train|поезд|🚆|
+Metro|метро|🚇|subway;underground
+Station|станция;вокзал|🚉|
+Stop|остановка|🚏|
+Car|машина;автомобиль|🚗|
+Bicycle|велосипед|🚲|bike
+Driver|водитель||
+Fare|стоимость проезда;плата за проезд||
+Platform|платформа||
+Route|маршрут||
+Schedule|расписание|🗓️|timetable
+Ferry|паром|⛴️|
+Boat|лодка|🚤|
+Rent|аренда;арендовать||
+Parking|парковка;стоянка|🅿️|
+Fuel|топливо;бензин|⛽|gas;petrol
+Seatbelt|ремень безопасности||seat belt
+Transfer|пересадка;трансфер|🔄|`},
+{t:'SHOPPING',d:{ru:'Магазины, размеры, цены',en:'Shops, sizes, prices'},e:['🛍️','👕','🏷️'],h:330,items:`
+Shop|магазин|🏬|store
+Market|рынок||
+Price|цена|🏷️|
+Size|размер|📏|
+Small|маленький||
+Large|большой||big
+Clothes|одежда|👕|
+Shoes|обувь;туфли|👟|
+Bag|сумка;пакет|👜|
+Gift|подарок|🎁|present
+Souvenir|сувенир|🗿|
+Cheap|дешёвый;дешево||
+Expensive|дорогой;дорого|💎|
+Discount|скидка||
+Sale|распродажа|🛍️|
+Receipt|чек|🧾|
+Fitting room|примерочная||changing room
+Open|открыто;открытый|🔓|
+Closed|закрыто;закрытый|🔒|
+Buy|покупать;купить|🛒|`},
+{t:'MONEY',d:{ru:'Карты, наличные, валюта',en:'Cards, cash, currency'},e:['💳','💵','🏧'],h:140,items:`
+Money|деньги|💰|
+Cash|наличные|💵|
+Card|карта;банковская карта|💳|
+Bank|банк|🏦|
+ATM|банкомат|🏧|cash machine
+Coin|монета|🪙|
+Currency|валюта|💱|
+Exchange|обмен;обменивать||
+Rate|курс|📈|
+Pay|платить;оплатить;заплатить||
+Change|сдача||
+Fee|комиссия;сбор||
+Dollar|доллар|💲|
+Euro|евро|💶|
+Wallet|кошелёк|👛|purse
+Account|банковский счёт;счёт||
+PIN|пин-код;пин;пинкод|🔢|pin code
+Cost|стоимость;стоить||
+Refund|возврат денег;возврат||
+Tax|налог||`},
+{t:'EMERGENCY',d:{ru:'Аптека, больница, безопасность',en:'Pharmacy, hospital, safety'},e:['🚑','💊','🆘'],h:0,items:`
+Help|помощь;помогите|🆘|
+Doctor|врач;доктор|🧑‍⚕️|
+Hospital|больница|🏥|
+Pharmacy|аптека||drugstore;chemist
+Medicine|лекарство|💊|
+Police|полиция|🚓|
+Ambulance|скорая помощь;скорая|🚑|
+Fire|пожар;огонь|🔥|
+Pain|боль||
+Sick|больной|🤒|ill
+Allergy|аллергия|🤧|
+Injury|травма|🩹|
+Accident|авария;несчастный случай|💥|
+Danger|опасность|⚠️|
+Safe|безопасный;безопасно||
+Lost|потерянный;потерялся||
+Thief|вор|🦹|
+Embassy|посольство|🏛️|
+Insurance|страховка;страхование|📄|
+Fever|температура;жар|🌡️|`},
+{t:'PEOPLE & COMMUNICATION',d:{ru:'Приветствия, вопросы, разговор',en:'Greetings, questions, talking'},e:['👋','💬','🤝'],h:265,items:`
+Hello|привет;здравствуйте|👋|hi
+Goodbye|до свидания;пока||bye
+Please|пожалуйста|🙏|
+Thank you|спасибо||thanks
+Sorry|извините;простите;прошу прощения||
+Yes|да|👍|
+No|нет|👎|
+Friend|друг|🤝|
+Name|имя|📛|
+Man|мужчина|👨|
+Woman|женщина|👩|
+Child|ребёнок|🧒|kid
+Family|семья|👪|
+Question|вопрос|❓|
+Answer|ответ||
+Understand|понимать||
+Speak|говорить|🗣️|
+Language|язык|🌐|
+Phone|телефон|📱|
+Message|сообщение|💬|`},
+{t:'TRAVEL ESSENTIALS',d:{ru:'Время, погода, полезные вещи',en:'Time, weather, useful things'},e:['🎒','📷','☂️'],h:190,items:`
+Time|время|⌚|
+Today|сегодня||
+Tomorrow|завтра||
+Yesterday|вчера||
+Day|день|☀️|
+Night|ночь|🌙|
+Week|неделя|📅|
+Weather|погода|⛅|
+Charger|зарядка;зарядное устройство|🔌|
+Battery|батарея;аккумулятор|🔋|
+Toilet|туалет|🚻|restroom
+Visa|виза||
+Tourist|турист|📸|
+Camera|фотоаппарат;камера|📷|
+Beach|пляж|🏖️|
+Museum|музей|🏛️|
+Trip|поездка;путешествие||journey
+Information|информация|ℹ️|info
+Free|бесплатный;свободный;бесплатно|🆓|
+Umbrella|зонт;зонтик|☂️|`}
+]},
+{ id:'connections', title:'TRAVEL CONNECTIONS', unit:'combinations', kind:'phrase',
+  sub:{ru:'200 полезных словосочетаний',en:'200 useful travel combinations'},
+  desc:{ru:'Learn 200 useful English combinations for real travel situations.',en:'Learn 200 useful English combinations for real travel situations.'},
+  lessons:[
+{t:'HOTEL & ACCOMMODATION',d:{ru:'Номера, удобства, сервис',en:'Rooms, comfort, service'},e:['🏨','🛎️','🏊'],h:28,items:`
+Front desk|стойка регистрации||reception desk
+Hotel room|гостиничный номер;номер в отеле||
+Room key|ключ от номера||
+Room service|обслуживание в номере||
+Single room|одноместный номер||
+Double room|двухместный номер||
+Twin room|номер с двумя кроватями||
+Late checkout|поздний выезд||late check-out;late check out
+Early check-in|ранний заезд;ранняя регистрация||early checkin;early check in
+Breakfast included|завтрак включён||
+Air conditioning|кондиционер||
+Hot water|горячая вода||
+Clean towels|чистые полотенца||
+Extra pillow|дополнительная подушка||
+Safe deposit box|сейф;депозитная ячейка||
+Do not disturb|не беспокоить||don't disturb
+Wake-up call|звонок-будильник;звонок для пробуждения||wake up call
+Swimming pool|бассейн||pool
+Free parking|бесплатная парковка||
+Sea view|вид на море||`},
+{t:'AIRPORT & FLIGHTS',d:{ru:'Посадка, багаж, контроль',en:'Boarding, baggage, control'},e:['🛫','🎫','🧳'],h:210,items:`
+Boarding pass|посадочный талон||
+Security check|досмотр безопасности;проверка безопасности;досмотр||
+Departure gate|выход на посадку||
+Baggage claim|выдача багажа;получение багажа||
+Carry-on bag|ручная кладь||carry on bag;hand luggage
+Checked baggage|сдаваемый багаж;зарегистрированный багаж||checked luggage
+Flight number|номер рейса||
+Window seat|место у окна||
+Aisle seat|место у прохода||
+Connecting flight|стыковочный рейс||
+Direct flight|прямой рейс||
+Delayed flight|задержанный рейс||
+Passport control|паспортный контроль||
+Customs declaration|таможенная декларация||
+Duty-free shop|магазин дьюти-фри;магазин беспошлинной торговли;дьюти-фри||duty free shop
+Arrival hall|зал прилёта||arrivals hall
+Lost luggage|потерянный багаж||lost baggage
+Excess baggage|перевес багажа;сверхнормативный багаж;перевес||
+Round trip|туда и обратно;поездка туда и обратно||
+One-way ticket|билет в один конец||one way ticket`},
+{t:'RESTAURANT & FOOD',d:{ru:'Блюда, напитки, заказ',en:'Dishes, drinks, ordering'},e:['🍝','🥤','🍷'],h:12,items:`
+Table for two|столик на двоих||
+Main course|основное блюдо||
+Side dish|гарнир||
+Still water|негазированная вода||
+Sparkling water|газированная вода||
+Daily special|блюдо дня||
+Set menu|комплексное меню;комплексный обед||
+Wine list|винная карта||
+Tap water|водопроводная вода||
+Fresh juice|свежевыжатый сок;свежий сок||
+Black coffee|чёрный кофе||
+Green tea|зелёный чай||
+Well done|хорошо прожаренный;хорошей прожарки||
+Medium rare|слабой прожарки;слабо прожаренный||
+Food allergy|пищевая аллергия||
+To go|навынос;с собой||take away;takeaway
+Service charge|плата за обслуживание||
+Kids menu|детское меню||kids' menu;children's menu
+Fast food|фастфуд;быстрое питание||
+Street food|уличная еда||`},
+{t:'CITY & DIRECTIONS',d:{ru:'Город, повороты, ориентиры',en:'City, turns, landmarks'},e:['🏙️','🚦','🗺️'],h:160,items:`
+City center|центр города||city centre
+Main street|главная улица||
+Old town|старый город||
+Turn left|поверните налево;повернуть налево||
+Turn right|поверните направо;повернуть направо||
+Go straight|идите прямо;идти прямо||go straight ahead
+Next to|рядом с||
+Across from|напротив||opposite
+Traffic lights|светофор||traffic light
+Pedestrian crossing|пешеходный переход||crosswalk;zebra crossing
+Tourist information|туристическая информация;туристический центр||
+City map|карта города||
+Shopping mall|торговый центр||mall;shopping centre;shopping center
+Town hall|ратуша;мэрия||
+Walking distance|пешая доступность;в пешей доступности||
+Around the corner|за углом||
+At the end|в конце||
+Public toilet|общественный туалет||
+Main square|главная площадь||
+Side street|переулок;боковая улица||`},
+{t:'PUBLIC TRANSPORT',d:{ru:'Билеты, остановки, пересадки',en:'Tickets, stops, transfers'},e:['🚇','🚏','🎟️'],h:45,items:`
+Bus stop|автобусная остановка||
+Train station|железнодорожный вокзал;вокзал||railway station
+Metro station|станция метро||subway station
+Taxi rank|стоянка такси||taxi stand
+Ticket machine|билетный автомат||
+Ticket office|билетная касса;касса||
+Return ticket|обратный билет;билет туда и обратно||
+Day pass|проездной на день||
+Next stop|следующая остановка||
+Last train|последний поезд||
+Rush hour|час пик||
+Bus route|автобусный маршрут||
+Platform number|номер платформы||
+Change trains|сделать пересадку;пересесть на другой поезд||
+Night bus|ночной автобус||
+Car rental|прокат автомобилей;аренда машины;прокат машин||car hire
+Airport shuttle|трансфер до аэропорта;шаттл в аэропорт||
+Travel card|проездной;транспортная карта||
+Get off|выходить;выйти||
+Get on|садиться;сесть||`},
+{t:'SHOPPING & SERVICES',d:{ru:'Покупки, примерка, услуги',en:'Buying, fitting, services'},e:['🛒','🏷️','📮'],h:330,items:`
+Gift shop|сувенирный магазин;магазин подарков||souvenir shop
+Price tag|ценник||
+Special offer|специальное предложение;спецпредложение||
+On sale|на распродаже;со скидкой||
+Try on|примерить;примерять||
+Smaller size|размер поменьше;меньший размер||
+Bigger size|размер побольше;больший размер||larger size
+Shopping bag|пакет для покупок;сумка для покупок||
+Gift wrapping|подарочная упаковка||
+Opening hours|часы работы||
+Local market|местный рынок||
+Checkout counter|касса||
+Laundry service|услуги прачечной;прачечная||
+Hair salon|парикмахерская;салон красоты||hairdresser
+Phone repair|ремонт телефонов;ремонт телефона||
+SIM card|сим-карта;симка||sim
+Mobile data|мобильный интернет||
+Post office|почтовое отделение;почта||
+Tax free|такс-фри;без налога||tax-free
+Return policy|правила возврата||`},
+{t:'MONEY & PAYMENTS',d:{ru:'Оплата, курс, переводы',en:'Payment, rates, transfers'},e:['💳','💱','🧾'],h:140,items:`
+Credit card|кредитная карта||
+Debit card|дебетовая карта||
+Cash payment|оплата наличными||
+Card payment|оплата картой||
+Exchange rate|обменный курс;курс валют||
+Currency exchange|обмен валюты||
+Bank account|банковский счёт||
+Cash withdrawal|снятие наличных||
+Small change|мелочь||
+Total amount|общая сумма;итоговая сумма||
+Bank fee|банковская комиссия||
+Contactless payment|бесконтактная оплата||
+Online payment|онлайн-оплата;оплата онлайн||
+Split the bill|разделить счёт||
+Pay in advance|заплатить заранее;оплатить заранее||
+Full price|полная цена||
+Price list|прайс-лист;список цен;прейскурант||
+Travel budget|бюджет поездки;бюджет на поездку||
+Money transfer|денежный перевод||
+Exact change|точная сумма;без сдачи||`},
+{t:'HEALTH & EMERGENCY',d:{ru:'Самочувствие, помощь, документы',en:'Health, help, documents'},e:['🏥','🩺','🚨'],h:0,items:`
+Travel insurance|туристическая страховка||
+First aid|первая помощь||
+Emergency exit|запасной выход;аварийный выход||
+Emergency number|экстренный номер;номер экстренной службы||
+Police station|полицейский участок||
+Fire station|пожарная часть;пожарная станция||
+Medical help|медицинская помощь||
+Bad headache|сильная головная боль||
+Stomach ache|боль в животе||stomachache
+Sore throat|боль в горле||
+High temperature|высокая температура||high fever
+Blood pressure|кровяное давление;давление||
+Health insurance|медицинская страховка||
+Lost passport|потерянный паспорт||
+Stolen wallet|украденный кошелёк||
+Car accident|автомобильная авария;автокатастрофа;ДТП||
+Pain killer|обезболивающее||painkiller
+Allergic reaction|аллергическая реакция||
+Doctor's appointment|приём у врача;запись к врачу||doctors appointment;doctor appointment
+Night pharmacy|ночная аптека||`},
+{t:'PEOPLE & COMMUNICATION',d:{ru:'Вежливые фразы и знакомство',en:'Polite phrases, meeting people'},e:['🙂','📞','💬'],h:265,items:`
+Good morning|доброе утро||
+Good evening|добрый вечер||
+Nice to meet you|приятно познакомиться||
+Excuse me|извините;простите||
+Thank you very much|большое спасибо||thanks a lot
+You're welcome|пожалуйста;не за что||you are welcome
+No problem|без проблем;нет проблем||
+Of course|конечно||
+Just a moment|минутку;одну минуту;одну минутку||
+Phone number|номер телефона||
+Email address|адрес электронной почты;электронная почта||e-mail address
+First name|имя||
+Last name|фамилия||surname
+Native speaker|носитель языка||
+Speak slowly|говорить медленно;говорите медленно||
+Say again|повторить;повторите||say it again
+Help me|помогите мне||
+See you later|увидимся позже;до встречи||
+Have a nice day|хорошего дня||have a good day
+Small talk|светская беседа;непринуждённый разговор||`},
+{t:'TRAVEL SITUATIONS',d:{ru:'Экскурсии, планы, полезное',en:'Tours, plans, useful stuff'},e:['🗺️','🎒','🔋'],h:190,items:`
+Travel agency|туристическое агентство;турагентство||
+Guided tour|экскурсия с гидом||
+Tour guide|гид;экскурсовод||
+Day trip|однодневная поездка||
+Entrance fee|плата за вход;входная плата||admission fee
+Sightseeing tour|обзорная экскурсия||
+Tourist attraction|достопримечательность;туристическая достопримечательность||
+Holiday season|сезон отпусков;праздничный сезон||
+Peak season|высокий сезон||high season
+Business trip|командировка||
+Weather forecast|прогноз погоды||
+Time zone|часовой пояс||
+Jet lag|джетлаг;смена часовых поясов||jetlag
+Power bank|пауэрбанк;внешний аккумулятор||powerbank
+Power outlet|розетка||power socket
+Visa application|заявление на визу;оформление визы||
+Lost and found|бюро находок||lost property
+Free Wi-Fi|бесплатный вай-фай;бесплатный wi-fi;бесплатный интернет||free wifi;free wi fi
+Travel plans|планы на поездку;планы путешествия||
+Hotel booking|бронирование отеля||hotel reservation`}
+]},
+{ id:'sentences', title:'REAL ENGLISH', unit:'sentences', kind:'sentence',
+  sub:{ru:'200 практичных предложений',en:'200 practical sentences'},
+  desc:{ru:'Learn 200 real English sentences for traveling.',en:'Learn 200 real English sentences for traveling.'},
+  lessons:[
+{t:'AIRPORT',d:{ru:'Регистрация, рейс, паспортный контроль',en:'Check-in, flight, passport control'},e:['🛫','🛂','💺'],h:210,items:`
+Where is the check-in desk?|Где стойка регистрации?||
+Here is my passport.|Вот мой паспорт.||here's my passport
+I have one suitcase.|У меня один чемодан.||
+Can I take this bag on the plane?|Можно взять эту сумку в самолёт?||
+Where is gate twelve?|Где выход номер двенадцать?||where is gate 12
+What time does boarding start?|Во сколько начинается посадка?||
+Is the flight on time?|Рейс вовремя?;Рейс по расписанию?||
+My flight is delayed.|Мой рейс задерживается.||
+I would like a window seat.|Я бы хотел место у окна.||I'd like a window seat
+I missed my flight.|Я опоздал на свой рейс.||
+My luggage is lost.|Мой багаж потерялся.||
+Where is the baggage claim?|Где выдача багажа?||
+I have nothing to declare.|Мне нечего декларировать.||
+I am here on vacation.|Я здесь в отпуске.||I'm here on vacation;I am here on holiday;I'm here on holiday
+I will stay for two weeks.|Я пробуду здесь две недели.||I'll stay for two weeks
+How do I get to the city center?|Как мне добраться до центра города?||how do I get to the city centre
+Is there a bus to the airport?|Есть ли автобус до аэропорта?||
+Which terminal is it?|Какой это терминал?||
+Can I change my seat?|Могу я поменять место?||
+Where can I get a taxi?|Где можно взять такси?||`},
+{t:'HOTEL',d:{ru:'Бронь, номер, просьбы',en:'Booking, room, requests'},e:['🏨','🛏️','🧹'],h:28,items:`
+I have a reservation.|У меня есть бронирование.||I have a booking
+The reservation is under my name.|Бронь на моё имя.||the booking is under my name
+Can I check in now?|Могу ли я сейчас заселиться?||
+Is breakfast included?|Завтрак включён?||
+What time is checkout?|Во сколько выезд?||what time is check-out;what time is check out
+Where is the reception?|Где находится стойка регистрации?||
+Do you have a room for tonight?|У вас есть номер на сегодня?||
+How much is it per night?|Сколько стоит за ночь?||
+Can I see the room?|Можно посмотреть номер?||
+What is the Wi-Fi password?|Какой пароль от вай-фая?||what's the wifi password;what is the wifi password;what's the wi-fi password
+The air conditioning doesn't work.|Кондиционер не работает.||the air conditioning does not work
+There are no towels in my room.|В моём номере нет полотенец.||
+Could you clean my room, please?|Не могли бы вы убрать мой номер, пожалуйста?||
+I lost my room key.|Я потерял ключ от номера.||
+Can I leave my luggage here?|Можно оставить здесь мой багаж?||
+I would like to stay one more night.|Я бы хотел остаться ещё на одну ночь.||I'd like to stay one more night
+Is there a gym in the hotel?|В отеле есть спортзал?||
+Could you call a taxi for me?|Не могли бы вы вызвать мне такси?||
+The room is too noisy.|В номере слишком шумно.||
+Thank you for everything.|Спасибо за всё.||`},
+{t:'RESTAURANT',d:{ru:'Столик, заказ, счёт',en:'Table, order, bill'},e:['🍽️','🧾','🥗'],h:12,items:`
+A table for two, please.|Столик на двоих, пожалуйста.||
+Can I see the menu, please?|Можно меню, пожалуйста?||
+I would like to order.|Я хотел бы заказать.||I'd like to order
+What do you recommend?|Что вы порекомендуете?||
+I am a vegetarian.|Я вегетарианец.||I'm a vegetarian
+I am allergic to nuts.|У меня аллергия на орехи.||I'm allergic to nuts
+Is this dish spicy?|Это блюдо острое?||
+Could I have some water, please?|Можно мне воды, пожалуйста?||
+No ice, please.|Без льда, пожалуйста.||
+I will have the chicken.|Я возьму курицу.||I'll have the chicken
+This is delicious.|Это очень вкусно.;Это вкусно.||
+Could I have the bill, please?|Можно мне счёт, пожалуйста?||could I have the check please
+Can I pay by card?|Можно оплатить картой?||
+Is service included?|Обслуживание включено?||
+This is not what I ordered.|Это не то, что я заказывал.||this isn't what I ordered
+Can we sit outside?|Можно нам сесть на улице?||
+How long is the wait?|Как долго ждать?||
+Can I get this to go?|Можно взять это с собой?||
+Do you have a table by the window?|У вас есть столик у окна?||
+Everything was great, thank you.|Всё было отлично, спасибо.||`},
+{t:'ASKING FOR DIRECTIONS',d:{ru:'Как пройти и где находится',en:'How to get there, where it is'},e:['🧭','📍','🚶'],h:160,items:`
+Excuse me, where is the station?|Извините, где вокзал?||
+How do I get to the museum?|Как мне добраться до музея?||
+Is it far from here?|Это далеко отсюда?||
+Is it within walking distance?|Это в пешей доступности?||
+Can you show me on the map?|Можете показать мне на карте?||
+Where is the nearest pharmacy?|Где находится ближайшая аптека?||
+I am lost.|Я заблудился.||I'm lost
+Go straight and turn left.|Идите прямо и поверните налево.||
+It is on the right.|Это справа.||it's on the right
+It is next to the bank.|Это рядом с банком.||it's next to the bank
+How long does it take to walk there?|Сколько времени идти туда пешком?||
+Which way is the beach?|В какой стороне пляж?||
+Is there a supermarket nearby?|Здесь поблизости есть супермаркет?||
+What is this street called?|Как называется эта улица?||what's this street called
+Where is the city center?|Где центр города?||where is the city centre
+Can I walk there?|Туда можно дойти пешком?||
+Take the second street on the right.|Поверните на вторую улицу направо.||
+I am looking for this address.|Я ищу этот адрес.||I'm looking for this address
+Is this the right way to the hotel?|Это правильная дорога к отелю?||
+Where are the toilets?|Где туалеты?||where is the toilet`},
+{t:'TRANSPORT',d:{ru:'Билеты, такси, поезда',en:'Tickets, taxis, trains'},e:['🚕','🚆','🎫'],h:45,items:`
+Where can I buy a ticket?|Где я могу купить билет?||
+How much is a ticket to the center?|Сколько стоит билет до центра?||how much is a ticket to the centre
+Which bus goes to the airport?|Какой автобус идёт в аэропорт?||
+Does this bus go to the station?|Этот автобус идёт до вокзала?||
+When is the next train?|Когда следующий поезд?||
+Where do I change trains?|Где мне сделать пересадку?||
+Please take me to this address.|Пожалуйста, отвезите меня по этому адресу.||
+How much is it to the airport?|Сколько стоит доехать до аэропорта?||
+Please stop here.|Остановитесь здесь, пожалуйста.||
+Can you turn on the meter?|Можете включить счётчик?||
+A one-way ticket, please.|Билет в один конец, пожалуйста.||a one way ticket please
+Is this seat taken?|Это место занято?||
+Which platform is it?|Какая это платформа?||
+I want to rent a car.|Я хочу арендовать машину.||
+Where is the nearest metro station?|Где ближайшая станция метро?||where is the nearest subway station
+How many stops is it?|Сколько остановок?||
+Please tell me when to get off.|Пожалуйста, скажите мне, когда выходить.||
+The train is late.|Поезд опаздывает.||
+Do I need to book in advance?|Нужно ли бронировать заранее?||
+How long is the journey?|Сколько длится поездка?||`},
+{t:'SHOPPING',d:{ru:'Примерка, цена, покупка',en:'Trying on, price, buying'},e:['🛍️','👗','🎁'],h:330,items:`
+How much does it cost?|Сколько это стоит?||
+I am just looking.|Я просто смотрю.||I'm just looking
+Can I try this on?|Можно это примерить?||
+Where is the fitting room?|Где примерочная?||where is the changing room
+Do you have this in a smaller size?|У вас есть это размером поменьше?||
+Do you have this in a bigger size?|У вас есть это размером побольше?||do you have this in a larger size
+Do you have it in another color?|У вас есть это другого цвета?||do you have it in another colour
+It is too expensive.|Это слишком дорого.||it's too expensive
+Can you give me a discount?|Можете сделать мне скидку?||
+I will take it.|Я возьму это.||I'll take it
+Can I return it?|Можно это вернуть?||
+Could I have a bag, please?|Можно мне пакет, пожалуйста?||
+What time do you close?|Во сколько вы закрываетесь?||
+Where can I buy souvenirs?|Где можно купить сувениры?||
+Can you wrap it as a gift?|Можете упаковать это как подарок?||
+I am looking for a gift.|Я ищу подарок.||I'm looking for a gift
+Is this on sale?|Это со скидкой?||
+Can I get a receipt?|Можно мне чек?||
+This doesn't fit me.|Мне это не подходит по размеру.||this does not fit me
+Is it handmade?|Это ручная работа?||`},
+{t:'MONEY',d:{ru:'Обмен, оплата, банкомат',en:'Exchange, payment, ATM'},e:['💱','🏧','💳'],h:140,items:`
+Where can I exchange money?|Где можно обменять деньги?||
+What is the exchange rate?|Какой обменный курс?||what's the exchange rate
+Is there an ATM nearby?|Здесь поблизости есть банкомат?||
+Do you accept credit cards?|Вы принимаете кредитные карты?||
+Can I pay in cash?|Можно заплатить наличными?||
+My card doesn't work.|Моя карта не работает.||my card does not work
+The ATM took my card.|Банкомат забрал мою карту.||
+I would like to change dollars to euros.|Я бы хотел поменять доллары на евро.||I'd like to change dollars to euros
+Is there a commission?|Есть ли комиссия?||
+Can I have small change?|Можно мне мелочью?||
+I think there is a mistake in the bill.|Кажется, в счёте ошибка.||I think there's a mistake in the bill
+Can we split the bill?|Можем ли мы разделить счёт?||
+Keep the change.|Сдачи не надо.||
+How much do I owe you?|Сколько я вам должен?||
+Do you have change?|У вас есть сдача?||
+Can I pay by phone?|Можно оплатить телефоном?||
+I need a receipt, please.|Мне нужен чек, пожалуйста.||
+Is tax included?|Налог включён?||
+I don't have enough cash.|У меня недостаточно наличных.||I do not have enough cash
+Where is the nearest bank?|Где ближайший банк?||`},
+{t:'EMERGENCY',d:{ru:'Врач, полиция, потери',en:'Doctor, police, lost items'},e:['🚑','🚓','🆘'],h:0,items:`
+Help!|Помогите!||
+Call an ambulance!|Вызовите скорую!||
+Call the police!|Вызовите полицию!||
+I need a doctor.|Мне нужен врач.||
+Where is the nearest hospital?|Где ближайшая больница?||
+I don't feel well.|Мне нехорошо.;Я плохо себя чувствую.||I do not feel well
+I have a headache.|У меня болит голова.||
+It hurts here.|Здесь болит.;Мне больно здесь.||
+I am allergic to penicillin.|У меня аллергия на пенициллин.||I'm allergic to penicillin
+I need something for a cold.|Мне нужно что-нибудь от простуды.||
+My passport was stolen.|У меня украли паспорт.||
+I lost my wallet.|Я потерял кошелёк.||
+Someone stole my bag.|Кто-то украл мою сумку.||
+Where is the police station?|Где полицейский участок?||
+I need to call my embassy.|Мне нужно позвонить в посольство.||
+I have travel insurance.|У меня есть туристическая страховка.||
+Is there a pharmacy open now?|Есть ли сейчас открытая аптека?||
+There has been an accident.|Произошла авария.||there's been an accident
+Please call this number.|Пожалуйста, позвоните по этому номеру.||
+Is it safe here?|Здесь безопасно?||`},
+{t:'EVERYDAY COMMUNICATION',d:{ru:'Понимание, просьбы, знакомство',en:'Understanding, requests, small talk'},e:['💬','🗣️','🤝'],h:265,items:`
+Could you help me?|Не могли бы вы мне помочь?||
+I don't understand.|Я не понимаю.||I do not understand
+Could you speak more slowly?|Не могли бы вы говорить медленнее?||
+Could you repeat that, please?|Не могли бы вы повторить, пожалуйста?||
+Do you speak English?|Вы говорите по-английски?||
+I speak a little English.|Я немного говорю по-английски.||
+What does this mean?|Что это значит?||
+How do you say this in English?|Как это сказать по-английски?||
+Could you write it down?|Не могли бы вы это записать?||
+What is your name?|Как вас зовут?||what's your name
+Where are you from?|Откуда вы?||
+I am from Uzbekistan.|Я из Узбекистана.||I'm from Uzbekistan
+It was nice talking to you.|Было приятно с вами поговорить.||
+Can you take a photo of us?|Можете сфотографировать нас?||
+Sorry, I am late.|Извините, я опоздал.||sorry I'm late
+That is very kind of you.|Это очень любезно с вашей стороны.||that's very kind of you
+Can I ask you a question?|Можно задать вам вопрос?||
+Can you recommend a good place to eat?|Можете посоветовать хорошее место, где поесть?||
+I don't know.|Я не знаю.||I do not know
+See you tomorrow.|Увидимся завтра.||`},
+{t:'REAL TRAVEL CONVERSATIONS',d:{ru:'Экскурсии, погода, впечатления',en:'Tours, weather, impressions'},e:['🏛️','⛅','📸'],h:190,items:`
+What time does the museum open?|Во сколько открывается музей?||
+How much is the entrance fee?|Сколько стоит вход?||
+Is there a discount for students?|Есть ли скидка для студентов?||
+Can I book a tour here?|Можно здесь забронировать экскурсию?||
+What time does the tour start?|Во сколько начинается экскурсия?||
+Is it open on Sundays?|Это открыто по воскресеньям?||
+Can I take photos here?|Здесь можно фотографировать?||
+What is the weather like today?|Какая сегодня погода?||what's the weather like today
+Will it rain tomorrow?|Завтра будет дождь?||
+Where can I charge my phone?|Где я могу зарядить телефон?||
+Do you have free Wi-Fi?|У вас есть бесплатный вай-фай?||do you have free wifi
+Where can I buy a SIM card?|Где можно купить сим-карту?||
+What do you recommend to visit?|Что вы советуете посетить?||
+Is it safe to swim here?|Здесь безопасно купаться?||
+This is my first time here.|Я здесь впервые.||
+I am traveling alone.|Я путешествую один.||I'm traveling alone;I am travelling alone;I'm travelling alone
+We are here for three days.|Мы здесь на три дня.||we're here for three days
+How far is the beach from here?|Как далеко отсюда пляж?||
+I had a wonderful time.|Я прекрасно провёл время.||
+I hope to come back again.|Надеюсь вернуться снова.||`}
+]}
+];
+/* Short meanings for the Word of the Hour (lock-screen widget) */
+const MEANINGS=`
+Airport|место, откуда летают самолёты
+Passport|документ для поездок за границу
+Ticket|даёт право на поездку или вход
+Flight|перелёт на самолёте
+Plane|летит по воздуху с пассажирами
+Luggage|все ваши вещи в поездке
+Suitcase|большая сумка на колёсах
+Boarding|вход пассажиров в самолёт
+Gate|где садятся на свой рейс
+Departure|время и место отлёта
+Arrival|когда вы прилетаете
+Security|проверка вещей и людей
+Check-in|оформление на рейс или в отеле
+Seat|ваше место в самолёте
+Window|место у иллюминатора
+Aisle|проход между рядами кресел
+Delay|рейс вылетает позже
+Cancel|отменить, например рейс
+Terminal|здание аэропорта
+Pilot|человек, который ведёт самолёт
+Hotel|место, где живут в поездке
+Room|ваш номер в отеле
+Reservation|заранее заказанный номер или стол
+Reception|стойка, где встречают гостей
+Key|открывает дверь номера
+Bed|на ней спят
+Towel|им вытираются после душа
+Pillow|под голову во время сна
+Blanket|укрывает, когда холодно
+Shower|моются под струёй воды
+Bathroom|комната с душем и туалетом
+Breakfast|утренняя еда
+Elevator|поднимает на нужный этаж
+Floor|уровень здания: 1-й, 2-й…
+Stay|время проживания
+Guest|тот, кто живёт в отеле
+Single|номер для одного
+Double|номер для двоих
+Wi-Fi|беспроводной интернет
+Checkout|выезд из отеля
+Restaurant|место, где едят и заказывают блюда
+Menu|список блюд и цен
+Waiter|приносит заказ к столу
+Table|стол, за которым едят
+Order|то, что вы попросили принести
+Bill|сумма к оплате
+Tip|деньги сверху за обслуживание
+Water|без газа или с газом
+Coffee|горячий бодрящий напиток
+Tea|горячий напиток из листьев
+Juice|напиток из фруктов
+Bread|подают к любому блюду
+Meat|говядина, баранина и др.
+Chicken|птица, популярное блюдо
+Fish|блюдо из моря или реки
+Salad|смесь овощей
+Soup|первое блюдо
+Dessert|сладкое в конце еды
+Vegetarian|без мяса и рыбы
+Spicy|с острым перцем
+Left|в сторону левой руки
+Right|в сторону правой руки
+Straight|вперёд, не поворачивая
+Street|дорога с домами по бокам
+Corner|где сходятся две улицы
+Map|схема города или местности
+Near|на небольшом расстоянии
+Far|на большом расстоянии
+Here|в этом месте
+There|в том месте
+North|направление по компасу вверх
+South|направление по компасу вниз
+Crossroads|где пересекаются дороги
+Bridge|переход через реку
+Square|открытая площадь в городе
+Building|дом, сооружение
+Entrance|куда входят
+Exit|откуда выходят
+Address|улица и номер дома
+Park|зелёная зона для отдыха
+Taxi|машина с водителем за плату
+Bus|большой транспорт по маршруту
+Train|едет по рельсам
+Metro|подземный городской поезд
+Station|где садятся на поезд
+Stop|где останавливается автобус
+Car|легковой автомобиль
+Bicycle|двухколёсный, крутишь педали
+Driver|тот, кто ведёт машину
+Fare|цена поездки
+Platform|где ждут поезд
+Route|путь от А до Б
+Schedule|время отправлений
+Ferry|судно для людей и машин
+Boat|небольшое судно
+Rent|взять на время за деньги
+Parking|место для машин
+Fuel|бензин для машины
+Seatbelt|пристегнитесь в машине
+Transfer|пересадка или трансфер
+Shop|где покупают товары
+Market|торговля под открытым небом
+Price|сколько стоит товар
+Size|S, M, L — размер одежды
+Small|маленький по размеру
+Large|большой по размеру
+Clothes|то, что носят
+Shoes|надевают на ноги
+Bag|в ней носят вещи
+Gift|то, что дарят другим
+Souvenir|память о поездке
+Cheap|стоит мало
+Expensive|стоит много
+Discount|снижение цены
+Sale|период низких цен
+Receipt|бумага об оплате
+Fitting room|где примеряют одежду
+Open|работает сейчас
+Closed|сейчас не работает
+Buy|отдать деньги за товар
+Money|наличные и деньги на карте
+Cash|бумажные деньги и монеты
+Card|банковская карта для оплаты
+Bank|хранит и выдаёт деньги
+ATM|автомат для снятия наличных
+Coin|металлические деньги
+Currency|деньги страны: $, €, сум
+Exchange|поменять одни деньги на другие
+Rate|сколько стоит валюта
+Pay|отдать деньги
+Change|деньги, которые вам вернули
+Fee|плата за услугу
+Dollar|валюта США
+Euro|валюта Европы
+Wallet|для денег и карт
+Account|ваши деньги в банке
+PIN|секретный код карты
+Cost|цена чего-либо
+Refund|возврат ваших денег
+Tax|обязательный платёж государству
+Help|кричат, когда нужна помощь
+Doctor|лечит людей
+Hospital|где лечат больных
+Pharmacy|где продают лекарства
+Medicine|помогает при болезни
+Police|следит за порядком
+Ambulance|медицинская машина
+Fire|огонь, опасность
+Pain|когда что-то болит
+Sick|плохо себя чувствует
+Allergy|реакция на еду или пыльцу
+Injury|повреждение тела
+Accident|неожиданная авария
+Danger|может причинить вред
+Safe|без опасности
+Lost|не можешь найти вещь или дорогу
+Thief|крадёт чужие вещи
+Embassy|представительство вашей страны
+Insurance|оплатит лечение и потери
+Fever|высокая температура тела
+Hello|так здороваются
+Goodbye|так прощаются
+Please|вежливое слово при просьбе
+Thank you|так благодарят
+Sorry|так извиняются
+Yes|согласие
+No|отказ
+Friend|близкий человек
+Name|как вас зовут
+Man|взрослый мужчина
+Woman|взрослая женщина
+Child|ребёнок
+Family|родители, дети, родные
+Question|то, что спрашивают
+Answer|то, что отвечают
+Understand|понимать смысл
+Speak|говорить словами
+Language|английский, русский и др.
+Phone|для звонков и сообщений
+Message|короткий текст другому
+Time|часы и минуты
+Today|этот день
+Tomorrow|следующий день
+Yesterday|прошлый день
+Day|светлое время суток
+Night|тёмное время суток
+Week|семь дней
+Weather|солнце, дождь, ветер
+Charger|заряжает телефон
+Battery|питание устройства
+Toilet|туалет, WC
+Visa|разрешение на въезд в страну
+Tourist|путешественник
+Camera|для фото и видео
+Beach|берег моря
+Museum|здание с выставками
+Trip|поездка куда-либо
+Information|полезные сведения
+Free|бесплатно или свободно
+Umbrella|защищает от дождя`;
+
+</script>
+<script>
+{
+'use strict';
+/* ================= helpers ================= */
+const $=(s,r=document)=>r.querySelector(s);
+const $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const pick=a=>a[Math.random()*a.length|0];
+const P={
+home:'<path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/>',
+book:'<path d="M2 4h7a3 3 0 0 1 3 3v14a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v14a2 2 0 0 1 2-2h8z"/>',
+repeat:'<path d="m17 2 4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="m7 22-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/>',
+chart:'<path d="M3 3v18h18"/><path d="M8 17v-5"/><path d="M13 17V8"/><path d="M18 17v-9"/>',
+sliders:'<path d="M4 6h9M19 6h1M4 12h3M13 12h7M4 18h11M21 18h-1"/><circle cx="16" cy="6" r="2.2"/><circle cx="10" cy="12" r="2.2"/><circle cx="18" cy="18" r="2.2"/>',
+vol:'<path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/>',
+lock:'<rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>',
+check:'<path d="M20 6 9 17l-5-5"/>',x:'<path d="M18 6 6 18M6 6l12 12"/>',
+right:'<path d="m9 18 6-6-6-6"/>',left:'<path d="m15 18-6-6 6-6"/>',
+flame:'<path d="M12 22c4 0 7-3 7-7 0-4-3-6-4-10-2 2-3 4-3 6-1-1-2-2-2-4-2 2-5 5-5 8 0 4 3 7 7 7z"/>',
+trophy:'<path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/>',
+clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+eye:'<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+eyeoff:'<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><path d="M3 3l18 18"/>',
+rotate:'<path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/>',
+bulb:'<path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/>',
+cards:'<rect x="3" y="6" width="14" height="15" rx="2"/><path d="M7 3h12a2 2 0 0 1 2 2v12"/>',
+list:'<path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/>',
+keyb:'<rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/>',
+shuffle:'<path d="M16 3h5v5"/><path d="M4 20 21 3"/><path d="M21 16v5h-5"/><path d="m15 15 6 6"/><path d="M4 4l5 5"/>',
+bell:'<path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10 21a2 2 0 0 0 4 0"/>',
+plane:'<path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>',
+download:'<path d="M12 3v12M7 10l5 5 5-5M5 21h14"/>',
+target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>'
+};
+const ic=(n,c='')=>`<svg class="i ${c}" viewBox="0 0 24 24" aria-hidden="true">${P[n]}</svg>`;
+
+/* ================= i18n ================= */
+const TX={
+ru:{nav_home:'Главная',nav_learn:'Обучение',nav_review:'Повторение',nav_progress:'Прогресс',nav_settings:'Настройки',
+g_morning:'Доброе утро',g_day:'Добрый день',g_evening:'Добрый вечер',g_night:'Доброй ночи',
+total:'Общий прогресс',words_l:'Слов изучено',conn_l:'Сочетаний изучено',sent_l:'Предложений изучено',lessons_d:'Уроков пройдено',tests_p:'Тестов сдано',streak:'Серия',days:'дн.',
+cont:'CONTINUE LEARNING',all_done:'Все 30 уроков пройдены!',go_review:'Поддерживайте форму в разделе повторения',
+sections:'Разделы обучения',lessons_n:'{n} уроков',prog:'Прогресс',
+st_new:'Не начат',st_prog:'В процессе',st_done:'Пройден',st_locked:'Закрыт',st_avail:'Доступен',st_complete:'Завершена',
+start:'Start learning',continue:'Continue',open:'Открыть',review_btn:'Повторить',
+sec_lock:'Откроется после раздела {s}',lesson:'Урок',test:'Тест',last:'Последний тест',best:'Лучший',
+completed:'Пройдено',current:'Текущий',locked:'Закрыто',none:'—',
+stg_learn:'LEARN',stg_recognize:'RECOGNIZE',stg_remember:'REMEMBER',stg_test:'LESSON TEST',stg_read:'READ & LISTEN',stg_build:'BUILD THE SENTENCE',
+d_learn:'Знакомство с каждой единицей по одной',d_recognize:'Выбор правильного ответа среди вариантов',d_remember:'Вспомните и напишите самостоятельно',d_test:'20 вопросов · нужно 70% (14 из 20)',d_read:'Читайте, слушайте, изучайте перевод',d_build:'Соберите предложение из перемешанных слов',
+stage:'Этап',inside:'Что в уроке',study_again:'Пройти урок заново',retake:'Пройти тест снова',back:'Назад',
+listen:'Слушать',slow:'Медленно',show_tr:'Показать перевод',hide_tr:'Скрыть перевод',check:'Проверить',next:'Продолжить',
+ok_t:'Верно!',bad_t:'Неверно',corr_ans:'Правильный ответ',
+a_c_en2ru:'Выберите перевод',a_c_ru2en:'Выберите английский вариант',a_c_img:'Что на картинке?',a_c_audio:'Прослушайте и выберите перевод',
+a_t_ru2en:'Напишите по-английски',a_t_en2ru:'Напишите перевод на русском',a_t_img:'Напишите английское слово',a_t_audio:'Прослушайте и напишите по-английски',
+a_build:'Соберите предложение',a_gap:'Вставьте пропущенное слово',a_match:'Соедините части словосочетаний',a_flash:'Вспомните перевод',
+ph_en:'Ответ на английском',ph_ru:'Ответ на русском',ph_build:'Нажимайте на слова ниже',hint:'Подсказка',clear:'Очистить',
+knew:'Знал(а)',didnt:'Не знал(а)',flip:'Нажмите, чтобы перевернуть',
+pass_t:'Урок пройден!',fail_t:'Почти получилось',pass_s:'Отличная работа. Следующий урок открыт.',pass_last:'Отличная работа!',fail_s:'Для прохождения нужно минимум 14 из 20 (70%). Повторите материал — тест будет с новыми вопросами.',
+correct:'Правильно',mistakes:'Ошибок',score:'Результат',time:'Время',attempt:'Попытка',
+to_repeat:'Что стоит повторить',repeat_lesson:'Повторить урок',to_lessons:'К урокам',
+sec_done:'Раздел завершён!',sec_done_s:'Вы прошли все 10 уроков раздела {s}.',next_sec:'Открыть {s}',to_review:'Перейти к повторению',
+rv_sub:'Повторяйте то, что даётся труднее всего. Ошибки попадают сюда автоматически.',src_m:'Мои ошибки',src_a:'Весь изученный материал',
+m_flash:'Flashcards',m_choice:'Multiple choice',m_typing:'Typing',m_audio:'Audio',m_mixed:'Mixed review',
+md_flash:'Карточки с переворотом',md_choice:'Выбор из 4 вариантов',md_typing:'Пишите сами',md_audio:'На слух',md_mixed:'Все форматы вместе',
+rv_empty_m:'Ошибок пока нет. Как только вы ошибётесь в уроке или тесте, слово появится здесь.',rv_empty_a:'Изучите хотя бы первые слова урока, чтобы повторять материал.',
+rv_note:'Повторение — отдельная тренировка: оно не меняет прогресс уроков.',hard:'Трудные единицы',times:'×',rv_done:'Повторение завершено',again:'Ещё раз',done:'Готово',
+pr_sub:'Только реальные данные ваших занятий.',accuracy:'Точность',ltime:'Время обучения',answers:'Ответов',history:'История тестов',no_hist:'Тестов пока не было',map30:'Карта 30 уроков',
+sound:'Звук',sound_d:'Произношение и звуки ответов',speed:'Скорость речи',voice:'Голос',voice_auto:'Автоматически (en-US)',test_v:'Проверить',
+theme:'Оформление',th_system:'Авто',th_light:'Светлая',th_dark:'Тёмная',lang:'Язык интерфейса',
+free:'Свободный доступ',free_d:'Все уроки и разделы открыты без очереди',remind:'Напоминание',remind_d:'Показывать в приложении, если сегодня не было занятий',
+reset:'Сбросить прогресс',reset_d:'Удалить уроки, тесты, ошибки и статистику',reset_q:'Сбросить весь прогресс?',reset_qd:'Все уроки, результаты тестов, ошибки и статистика будут удалены. Действие нельзя отменить. Настройки сохранятся.',
+cancel:'Отмена',do_reset:'Сбросить',reset_ok:'Прогресс сброшен',
+no_audio:'Озвучка недоступна в этом браузере',audio_off:'Звук выключен в настройках',
+storage:'Браузер не даёт сохранять данные. Прогресс сохранится только до закрытия страницы.',
+remind_t:'Сегодня вы ещё не занимались — несколько минут сохранят вашу серию.',
+saved:'Прогресс сохранён',unlocked:'Открыт урок: {s}',install:'Установить приложение',install_d:'Работает офлайн как обычное приложение',
+q_of:'{a} из {b}',test_n:'Test {n}/10',min:'мин',hr:'ч',
+stage_start:'Начать этап',questions:'{n} заданий',offline:'Работает без интернета после первой загрузки',
+u_word:'слов',u_phrase:'сочетаний',u_sentence:'предложений',twenty:'20 {u}',
+learn_title:'Обучение',learn_sub:'Три раздела — от отдельных слов к живым фразам.',seq_note:'Разделы открываются по порядку. Включить свободный доступ можно в настройках.',
+about:'Версия 1.1 · данные хранятся только на этом устройстве',
+tr_mode:'Режим путешествия',tr_off_t:'Улетаете в другую страну?',tr_off_d:'Включите режим путешествия — каждый час новое слово, и на экране блокировки iPhone тоже.',
+tr_fly:'✈️ Я улетел',tr_back:'🏠 Я прилетел обратно',tr_day:'День {n}',woh:'Слово часа',next_word:'Новое слово в {t}',
+tr_on_q:'Режим путешествия включён ✈️',tr_off_q:'С возвращением домой 🏠',tr_sync_d:'Нажмите кнопку, чтобы виджет на экране блокировки тоже переключился. Нужно приложение Scriptable со скриптом «Travel English».',
+tr_sync:'Обновить виджет iPhone',later:'Позже',how:'Как установить виджет',
+wg_t:'Виджет на экране блокировки',wg_d:'Слово часа под часами на экране блокировки iPhone. Работает через бесплатное приложение Scriptable.',
+wg_s1:'Установите Scriptable из App Store (бесплатно).',wg_s2:'Нажмите «Скопировать скрипт» ниже.',wg_s3:'В Scriptable нажмите «+», вставьте скрипт и назовите его точно: Travel English.',
+wg_s4:'Зажмите экран блокировки → «Настроить» → «Экран блокировки» → нажмите на область виджетов под часами → Scriptable.',wg_s5:'Нажмите на добавленный виджет → Script → Travel English. Готово.',
+wg_s6:'Чтобы переключить режим: нажмите на виджет или на кнопку «✈️ Я улетел / 🏠 Я прилетел» в приложении.',
+wg_copy:'Скопировать скрипт',wg_copied:'Скрипт скопирован',wg_store:'Открыть Scriptable в App Store',wg_note:'iOS обновляет виджеты сам: новое слово появляется в начале часа, иногда с задержкой в несколько минут. Виджеты можно ставить только под часами или над ними — углы заняты кнопками фонарика и камеры.',
+wg_link:'Ссылка для ручного переключения: '},
+en:{nav_home:'Home',nav_learn:'Learning',nav_review:'Review',nav_progress:'Progress',nav_settings:'Settings',
+g_morning:'Good morning',g_day:'Good afternoon',g_evening:'Good evening',g_night:'Good night',
+total:'Total progress',words_l:'Words learned',conn_l:'Connections learned',sent_l:'Sentences learned',lessons_d:'Lessons completed',tests_p:'Tests passed',streak:'Streak',days:'days',
+cont:'CONTINUE LEARNING',all_done:'All 30 lessons completed!',go_review:'Keep your English fresh in Review',
+sections:'Learning sections',lessons_n:'{n} lessons',prog:'Progress',
+st_new:'Not started',st_prog:'In progress',st_done:'Completed',st_locked:'Locked',st_avail:'Available',st_complete:'Completed',
+start:'Start learning',continue:'Continue',open:'Open',review_btn:'Review',
+sec_lock:'Unlocks after {s}',lesson:'Lesson',test:'Test',last:'Last test',best:'Best',
+completed:'Completed',current:'Current',locked:'Locked',none:'—',
+stg_learn:'LEARN',stg_recognize:'RECOGNIZE',stg_remember:'REMEMBER',stg_test:'LESSON TEST',stg_read:'READ & LISTEN',stg_build:'BUILD THE SENTENCE',
+d_learn:'Meet every item one at a time',d_recognize:'Pick the right answer from options',d_remember:'Recall it and type it yourself',d_test:'20 questions · 70% to pass (14 of 20)',d_read:'Read, listen and study the translation',d_build:'Build the sentence from shuffled words',
+stage:'Stage',inside:'In this lesson',study_again:'Study the lesson again',retake:'Retake the test',back:'Back',
+listen:'Listen',slow:'Slow',show_tr:'Show translation',hide_tr:'Hide translation',check:'Check',next:'Continue',
+ok_t:'Correct!',bad_t:'Not quite',corr_ans:'Correct answer',
+a_c_en2ru:'Choose the translation',a_c_ru2en:'Choose the English',a_c_img:'What is this?',a_c_audio:'Listen and choose the translation',
+a_t_ru2en:'Type it in English',a_t_en2ru:'Type the Russian translation',a_t_img:'Type the English word',a_t_audio:'Listen and type it in English',
+a_build:'Build the sentence',a_gap:'Fill in the missing word',a_match:'Match the halves',a_flash:'Recall the translation',
+ph_en:'Answer in English',ph_ru:'Answer in Russian',ph_build:'Tap the words below',hint:'Hint',clear:'Clear',
+knew:'I knew it',didnt:"Didn't know",flip:'Tap to flip',
+pass_t:'Lesson complete!',fail_t:'Almost there',pass_s:'Great work. The next lesson is unlocked.',pass_last:'Great work!',fail_s:'You need at least 14 of 20 (70%) to pass. Study the lesson again — the test will use new questions.',
+correct:'Correct',mistakes:'Mistakes',score:'Score',time:'Time',attempt:'Attempt',
+to_repeat:'Worth reviewing',repeat_lesson:'Study the lesson again',to_lessons:'Back to lessons',
+sec_done:'Section complete!',sec_done_s:'You finished all 10 lessons of {s}.',next_sec:'Open {s}',to_review:'Go to Review',
+rv_sub:'Practice what is hardest for you. Mistakes land here automatically.',src_m:'My mistakes',src_a:'Everything learned',
+m_flash:'Flashcards',m_choice:'Multiple choice',m_typing:'Typing',m_audio:'Audio',m_mixed:'Mixed review',
+md_flash:'Flip cards',md_choice:'Pick from 4 options',md_typing:'Type it yourself',md_audio:'By ear',md_mixed:'All formats',
+rv_empty_m:'No mistakes yet. Anything you get wrong in a lesson or test will appear here.',rv_empty_a:'Study the first items of a lesson to start reviewing.',
+rv_note:'Review is separate practice: it does not change lesson progress.',hard:'Hard items',times:'×',rv_done:'Review finished',again:'Again',done:'Done',
+pr_sub:'Only real data from your study sessions.',accuracy:'Accuracy',ltime:'Learning time',answers:'Answers',history:'Test history',no_hist:'No tests yet',map30:'Map of 30 lessons',
+sound:'Sound',sound_d:'Pronunciation and answer sounds',speed:'Speech speed',voice:'Voice',voice_auto:'Automatic (en-US)',test_v:'Test',
+theme:'Appearance',th_system:'Auto',th_light:'Light',th_dark:'Dark',lang:'Interface language',
+free:'Free access',free_d:'Unlock all lessons and sections',remind:'Reminder',remind_d:'Show a reminder in the app if you have not studied today',
+reset:'Reset progress',reset_d:'Delete lessons, tests, mistakes and stats',reset_q:'Reset all progress?',reset_qd:'All lessons, test results, mistakes and statistics will be deleted. This cannot be undone. Settings are kept.',
+cancel:'Cancel',do_reset:'Reset',reset_ok:'Progress reset',
+no_audio:'Speech is not available in this browser',audio_off:'Sound is turned off in Settings',
+storage:'This browser blocks saving. Progress will only last until the page is closed.',
+remind_t:'You have not studied today — a few minutes keeps your streak alive.',
+saved:'Progress saved',unlocked:'Unlocked: {s}',install:'Install the app',install_d:'Works offline like a native app',
+q_of:'{a} of {b}',test_n:'Test {n}/10',min:'min',hr:'h',
+stage_start:'Start stage',questions:'{n} tasks',offline:'Works offline after the first load',
+u_word:'words',u_phrase:'combinations',u_sentence:'sentences',twenty:'20 {u}',
+learn_title:'Learning',learn_sub:'Three sections — from single words to real phrases.',seq_note:'Sections open in order. You can enable free access in Settings.',
+about:'Version 1.1 · data is stored only on this device',
+tr_mode:'Travel mode',tr_off_t:'Flying abroad?',tr_off_d:'Turn on travel mode — a new word every hour, on your iPhone lock screen too.',
+tr_fly:'✈️ I flew out',tr_back:"🏠 I'm back home",tr_day:'Day {n}',woh:'Word of the hour',next_word:'Next word at {t}',
+tr_on_q:'Travel mode is on ✈️',tr_off_q:'Welcome home 🏠',tr_sync_d:'Tap the button so the lock-screen widget switches too. Requires the Scriptable app with the “Travel English” script.',
+tr_sync:'Update iPhone widget',later:'Later',how:'How to install the widget',
+wg_t:'Lock screen widget',wg_d:'Word of the hour under the clock on your iPhone lock screen. Works through the free Scriptable app.',
+wg_s1:'Install Scriptable from the App Store (free).',wg_s2:'Tap “Copy script” below.',wg_s3:'In Scriptable tap “+”, paste the script and name it exactly: Travel English.',
+wg_s4:'Long-press the lock screen → Customize → Lock Screen → tap the widget area under the clock → Scriptable.',wg_s5:'Tap the added widget → Script → Travel English. Done.',
+wg_s6:'To switch modes: tap the widget, or the “✈️ I flew out / 🏠 I’m back home” button in the app.',
+wg_copy:'Copy script',wg_copied:'Script copied',wg_store:'Open Scriptable in the App Store',wg_note:'iOS refreshes widgets itself: the new word appears at the top of the hour, sometimes a few minutes late. Widgets can only go under or above the clock — the corners hold the flashlight and camera buttons.',
+wg_link:'Manual switch link: '}};
+const t=(k,v)=>{let s=(TX[S.settings.lang]||TX.ru)[k]??TX.en[k]??k;if(v)for(const x in v)s=s.replace('{'+x+'}',v[x]);return s};
+const loc=o=>o[S.settings.lang]||o.en;
+
+/* ================= data ================= */
+const DATA=SECTIONS.map((s,si)=>({...s,si,lessons:s.lessons.map((l,li)=>({...l,si,li,kind:s.kind,key:si+'-'+li,
+ items:l.items.trim().split('\n').map((line,ii)=>{const[en,ru,em,al]=line.split('|');return{id:si+'.'+li+'.'+ii,si,li,ii,kind:s.kind,en:en.trim(),ru:ru.split(';').map(x=>x.trim()),em:(em||'').trim(),alts:(al||'').split(';').map(x=>x.trim()).filter(Boolean)}})}))}));
+const ITEMS={};DATA.forEach(s=>s.lessons.forEach(l=>l.items.forEach(i=>ITEMS[i.id]=i)));
+const MEAN=Object.fromEntries(MEANINGS.trim().split('\n').map(l=>l.split('|')));
+const WOH=DATA[0].lessons.flatMap(l=>l.items.map(i=>[i.en,i.ru[0],MEAN[i.en]||'',i.em||l.e[0]]));
+const hourIdx=d=>Math.floor((d.getTime()/60000-d.getTimezoneOffset())/60);
+const wordAt=d=>{const n=WOH.length;return WOH[((hourIdx(d)*73)%n+n)%n]};
+const nextHour=()=>{const d=new Date();d.setMinutes(0,0,0);d.setHours(d.getHours()+1);return d};
+const hh=d=>String(d.getHours()).padStart(2,'0')+':00';
+const SCRIPT_NAME='Travel English';const deepLink=on=>'scriptable:///run/'+encodeURIComponent(SCRIPT_NAME)+'?mode='+(on?'on':'off');
+const STORE='https://apps.apple.com/app/scriptable/id1405459188';
+const getL=key=>{const[a,b]=key.split('-').map(Number);return DATA[a].lessons[b]};
+
+/* ================= storage ================= */
+const KEY='travel-english:v1';
+let storageOK=true;
+const DEF={sound:true,rate:.95,voice:'',mode:'system',lang:'ru',free:false,remind:false,remindAt:'19:00',hideTr:false,travel:false,travelSince:null};
+const fresh=()=>({v:1,settings:{...DEF},lessons:{},mistakes:{},stats:{answers:0,correct:0,time:0,days:[]},history:[]});
+function load(){let raw=null;try{localStorage.setItem(KEY+':t','1');localStorage.removeItem(KEY+':t');raw=localStorage.getItem(KEY)}catch(e){storageOK=false}
+ if(!raw)return fresh();try{const d=JSON.parse(raw),f=fresh();return{...f,...d,settings:{...f.settings,...d.settings},stats:{...f.stats,...d.stats},lessons:d.lessons||{},mistakes:d.mistakes||{},history:d.history||[]}}catch(e){return fresh()}}
+let S=load();
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));storageOK=true}catch(e){storageOK=false}}
+
+/* ================= progress model ================= */
+const LS=key=>S.lessons[key]||(S.lessons[key]={stage:'learn',pos:0,learned:0,queue:null,qpos:0,retried:[],test:null,done:false,attempts:0,last:null,best:null,intro:false});
+const isDone=(si,li)=>!!S.lessons[si+'-'+li]?.done;
+const secDone=si=>DATA[si].lessons.filter(l=>isDone(si,l.li)).length;
+const secOpen=si=>S.settings.free||si===0||secDone(si-1)===10;
+const lesOpen=(si,li)=>S.settings.free||(secOpen(si)&&(li===0||isDone(si,li-1)));
+function status(L){if(isDone(L.si,L.li))return'done';if(!lesOpen(L.si,L.li))return'locked';const st=S.lessons[L.key];return st&&(st.pos>0||st.stage!=='learn'||st.attempts)?'prog':'new'}
+function frac(L){const st=S.lessons[L.key];if(!st)return 0;if(st.done&&st.stage==='done')return 1;
+ const q=st.queue?st.queue.length:20;
+ return st.stage==='learn'?st.pos/20*.25:st.stage==='recognize'?.25+st.qpos/q*.25:st.stage==='remember'?.5+st.qpos/q*.25:st.stage==='test'?.75+((st.test?.pos)||0)/20*.25:1}
+const learnedCount=L=>{const st=S.lessons[L.key];if(!st)return 0;if(st.done||st.stage!=='learn')return 20;return st.learned||0};
+function current(){for(const s of DATA)for(const l of s.lessons)if(!isDone(s.si,l.li)&&lesOpen(s.si,l.li))return l;return null}
+const unitsDone=si=>secDone(si)*20;
+const testsPassed=()=>Object.values(S.lessons).filter(x=>x.best!=null&&x.best>=14).length;
+const lessonsDone=()=>DATA.reduce((a,s)=>a+secDone(s.si),0);
+const dkey=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+const today=()=>dkey(new Date());
+function streak(){const set=new Set(S.stats.days);const d=new Date();if(!set.has(dkey(d)))d.setDate(d.getDate()-1);let n=0;while(set.has(dkey(d))){n++;d.setDate(d.getDate()-1)}return n}
+function markDay(){const k=today();if(!S.stats.days.includes(k)){S.stats.days.push(k);S.stats.days=S.stats.days.slice(-500)}}
+function record(it,ok,review){S.stats.answers++;if(ok)S.stats.correct++;markDay();
+ if(review){if(ok){if(S.mistakes[it.id]>1)S.mistakes[it.id]--;else delete S.mistakes[it.id]}else S.mistakes[it.id]=(S.mistakes[it.id]||0)+1}
+ else if(!ok)S.mistakes[it.id]=(S.mistakes[it.id]||0)+1;
+ save()}
+const fmtTime=s=>{const m=Math.round(s/60);return m<60?m+' '+t('min'):Math.floor(m/60)+' '+t('hr')+' '+(m%60)+' '+t('min')};
+
+/* ================= speech & sounds ================= */
+const Speech={ok:typeof window.speechSynthesis!=='undefined'&&typeof window.SpeechSynthesisUtterance!=='undefined',voices:[],
+ init(){if(!this.ok)return;const ld=()=>{try{this.voices=speechSynthesis.getVoices().filter(v=>/^en/i.test(v.lang))}catch(e){}};ld();try{speechSynthesis.addEventListener('voiceschanged',()=>{ld();if(UI.tab==='settings'&&!UI.full&&!UI.sub)render()})}catch(e){}},
+ voice(){const v=this.voices;return v.find(x=>x.voiceURI===S.settings.voice)||v.find(x=>x.lang==='en-US'&&/samantha|google us|aria|jenny|natural|ava/i.test(x.name))||v.find(x=>x.lang==='en-US')||v.find(x=>/^en/i.test(x.lang))},
+ say(text,o={}){if(!S.settings.sound){if(!o.silent)toast(t('audio_off'));return}if(!this.ok){if(!o.silent)toast(t('no_audio'));return}
+  try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='en-US';const v=this.voice();if(v)u.voice=v;u.rate=Math.max(.3,S.settings.rate*(o.slow?.62:1));
+   const b=o.btn;if(b){b.classList.add('speaking');const off=()=>b.classList.remove('speaking');u.onend=off;u.onerror=off;setTimeout(off,9000)}
+   speechSynthesis.speak(u)}catch(e){if(!o.silent)toast(t('no_audio'))}}};
+const audioOK=()=>Speech.ok&&S.settings.sound;
+let AC=null;
+function beep(ok){if(!S.settings.sound)return;try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();const o=AC.createOscillator(),g=AC.createGain();o.connect(g);g.connect(AC.destination);const n=AC.currentTime;
+ o.type='sine';o.frequency.setValueAtTime(ok?660:300,n);if(ok)o.frequency.setValueAtTime(880,n+.09);else o.frequency.linearRampToValueAtTime(220,n+.18);
+ g.gain.setValueAtTime(.0001,n);g.gain.exponentialRampToValueAtTime(.12,n+.02);g.gain.exponentialRampToValueAtTime(.0001,n+.26);o.start(n);o.stop(n+.3)}catch(e){}}
+
+/* ================= answer checking ================= */
+const CONTR=[["don't","do not"],["doesn't","does not"],["didn't","did not"],["isn't","is not"],["aren't","are not"],["can't","cannot"],["can not","cannot"],["won't","will not"],["i'm","i am"],["i'd","i would"],["i'll","i will"],["it's","it is"],["what's","what is"],["there's","there is"],["that's","that is"],["we're","we are"],["you're","you are"],["here's","here is"],["they're","they are"],["we'll","we will"],["let's","let us"]];
+function normEn(s){s=' '+String(s).toLowerCase().replace(/[’‘`´]/g,"'").replace(/[.,!?;:"«»()]/g,' ').replace(/-/g,' ').replace(/\s+/g,' ').trim()+' ';
+ for(const[a,b]of CONTR)s=s.split(' '+a+' ').join(' '+b+' ');return s.replace(/\s+/g,' ').trim()}
+const normRu=s=>String(s).toLowerCase().replace(/ё/g,'е').replace(/[.,!?;:"«»()—–]/g,' ').replace(/-/g,' ').replace(/\s+/g,' ').trim();
+const okEn=(it,v)=>{const n=normEn(v);return!!n&&[it.en,...it.alts].some(x=>normEn(x)===n)};
+const okRu=(it,v)=>{const n=normRu(v);return!!n&&it.ru.some(x=>normRu(x)===n)};
+
+/* ================= question generation ================= */
+function pool(it){const L=DATA[it.si].lessons[it.li];return shuffle(L.items.filter(x=>x.id!==it.id)).concat(shuffle(DATA[it.si].lessons.filter(l=>l.li!==it.li).flatMap(l=>l.items)))}
+function options(it,field){const out=[it],seen=new Set(),ems=new Set([it.em]);
+ const key=x=>field==='ru'?normRu(x.ru[0]):normEn(x.en);
+ const mine=field==='ru'?new Set(it.ru.map(normRu)):new Set([it.en,...it.alts].map(normEn));seen.add(key(it));
+ for(const x of pool(it)){if(out.length>=4)break;if(field==='em'&&(!x.em||ems.has(x.em)))continue;
+  const k=key(x);if(seen.has(k)||mine.has(k))continue;if(field==='ru'&&x.ru.some(r=>mine.has(normRu(r))))continue;
+  seen.add(k);ems.add(x.em);out.push(x)}return shuffle(out)}
+const toks=s=>s.replace(/[.!?,]/g,'').split(/\s+/).filter(Boolean);
+function matchSet(it){const sp=x=>{const p=x.en.split(' ');return[p[0],p.slice(1).join(' ')]};if(it.en.split(' ').length<2)return null;
+ const out=[it],L=new Set([sp(it)[0].toLowerCase()]),R=new Set([sp(it)[1].toLowerCase()]);
+ for(const x of pool(it)){if(out.length>=4)break;if(x.en.split(' ').length<2)continue;const[a,b]=sp(x);if(L.has(a.toLowerCase())||R.has(b.toLowerCase()))continue;L.add(a.toLowerCase());R.add(b.toLowerCase());out.push(x)}
+ return out.length===4?out.map(x=>({id:x.id,l:sp(x)[0],r:sp(x)[1]})):null}
+function avail(ty,it){if(/audio/.test(ty))return audioOK();if(/img/.test(ty))return!!it.em;if(ty==='match')return!!matchSet(it);if(ty==='gap')return it.en.split(' ').length>=2;if(ty==='build')return it.kind==='sentence';return true}
+const TYPES={
+ word:{recognize:['c_en2ru','c_ru2en','c_img','c_audio'],remember:['t_ru2en','t_en2ru','t_img','t_audio'],test:['c_en2ru','c_ru2en','t_ru2en','c_audio','c_img','t_audio','t_en2ru']},
+ phrase:{recognize:['c_en2ru','c_ru2en','c_audio','match','gap'],remember:['t_ru2en','t_ru2en','t_audio','t_en2ru'],test:['c_en2ru','c_ru2en','t_ru2en','c_audio','match','gap','t_audio']},
+ sentence:{recognize:['build'],remember:['t_ru2en'],test:['c_en2ru','c_ru2en','build','t_ru2en','c_audio','gap']}};
+function queue(L,stage){const types=TYPES[L.kind][stage];let tl=[];while(tl.length<20)tl=tl.concat(shuffle(types));
+ return shuffle(L.items).map((it,i)=>{let ty=tl[i];if(!avail(ty,it))ty=shuffle(types).find(x=>avail(x,it))||(stage==='remember'?'t_ru2en':'c_en2ru');return[it.ii,ty]})}
+const fixType=(ty,it)=>{if(/audio/.test(ty)&&!audioOK())return ty[0]==='c'?'c_en2ru':'t_ru2en';if(ty==='match'&&!matchSet(it))return'c_en2ru';if(/img/.test(ty)&&!it.em)return ty[0]==='c'?'c_ru2en':'t_ru2en';return ty};
+
+/* ================= UI state ================= */
+const UI={tab:'home',sub:null,full:null,justUnlocked:null};
+let RV=null; // review session
+let lastAct=Date.now(),keyHandler=null,lastFrac=0,deferredInstall=null;
+
+function toast(msg){$$('.toast').forEach(x=>x.remove());const d=document.createElement('div');d.className='toast';d.textContent=msg;document.body.appendChild(d);setTimeout(()=>d.remove(),2600)}
+function confetti(){const c=document.createElement('div');c.className='confetti';const col=['#22a861','#0a74f0','#ffb340','#ff6f91','#7c5cff','#3ccf82'];
+ c.innerHTML=Array.from({length:70},()=>`<i style="left:${Math.random()*100}%;background:${pick(col)};animation-duration:${2+Math.random()*2}s;animation-delay:${Math.random()*.6}s;transform:rotate(${Math.random()*360}deg)"></i>`).join('');
+ document.body.appendChild(c);setTimeout(()=>c.remove(),4800)}
+function modal(html){const m=document.createElement('div');m.className='modal-bg';m.innerHTML=`<div class="modal card">${html}</div>`;m.addEventListener('click',e=>{if(e.target===m)m.remove()});document.body.appendChild(m);return m}
+const ring=(p,size=118,label='')=>{const r=(size/2)-8,c=2*Math.PI*r;return`<div class="ring" style="width:${size}px;height:${size}px"><svg viewBox="0 0 ${size} ${size}"><circle class="bg" cx="${size/2}" cy="${size/2}" r="${r}"/><circle class="fg" cx="${size/2}" cy="${size/2}" r="${r}" stroke-dasharray="${c}" stroke-dashoffset="${c}" data-off="${c*(1-p)}"/></svg><b>${Math.round(p*100)}%</b>${label}</div>`};
+const bar=p=>`<div class="bar"><i data-w="${Math.round(p*1000)/10}"></i></div>`;
+function animateBars(){requestAnimationFrame(()=>requestAnimationFrame(()=>{$$('.bar>i[data-w]').forEach(b=>b.style.width=b.dataset.w+'%');$$('.ring .fg[data-off]').forEach(c=>c.style.strokeDashoffset=c.dataset.off)}))}
+const unitName=k=>t('u_'+k);
+
+/* ================= illustrations ================= */
+function secArt(si){
+ const bg=['light-dark(#dcebff,#14253c)','light-dark(#dcf4e6,#12291d)','light-dark(#ffeedd,#33240f)'][si];
+ const bg2=['light-dark(#eef5ff,#1b2f4a)','light-dark(#effaf3,#183324)','light-dark(#fff7ee,#3d2c15)'][si];
+ const card='light-dark(#ffffff,#24262c)',ink='light-dark(#1d1d1f,#f2f2f5)',mut='light-dark(#9aa0aa,#6b7080)';
+ const g=`<defs><linearGradient id="sg${si}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:${bg2}"/><stop offset="1" style="stop-color:${bg}"/></linearGradient></defs><rect width="400" height="170" fill="url(#sg${si})"/>`;
+ const sh='filter:drop-shadow(0 6px 10px rgba(0,0,0,.12))';
+ if(si===0)return`<svg viewBox="0 0 400 170" preserveAspectRatio="xMidYMid slice">${g}
+  <circle cx="330" cy="40" r="60" style="fill:light-dark(#c8defc,#1d3554)"/>
+  <path d="M40 140 C120 60 230 150 360 50" style="fill:none;stroke:light-dark(#8db8f5,#3d6aa8);stroke-width:2.5;stroke-dasharray:6 7"/>
+  <g style="${sh}"><rect x="64" y="46" width="118" height="78" rx="14" transform="rotate(-8 123 85)" style="fill:${card}"/><rect x="104" y="40" width="124" height="82" rx="14" style="fill:${card}"/>
+  <text x="166" y="80" text-anchor="middle" style="font:800 22px var(--font);fill:${ink}">Ticket</text><text x="166" y="104" text-anchor="middle" style="font:600 13px var(--font);fill:${mut}">билет</text></g>
+  <g transform="translate(300 104) rotate(-24)" style="${sh}"><path d="M-30 0 L22 -6 L34 0 L22 6 Z" style="fill:#0a74f0"/><path d="M-4 -2 L-16 -22 L-8 -22 L10 -3 Z M-4 2 L-16 22 L-8 22 L10 3Z M-26 -1 L-34 -11 L-29 -11 L-20 -1Z M-26 1 L-34 11 L-29 11 L-20 1Z" style="fill:#0a74f0"/></g></svg>`;
+ if(si===1)return`<svg viewBox="0 0 400 170" preserveAspectRatio="xMidYMid slice">${g}
+  <circle cx="70" cy="34" r="54" style="fill:light-dark(#c3ecd4,#1a3a28)"/>
+  <path d="M168 85 C 196 50, 204 120, 232 85" style="fill:none;stroke:#22a861;stroke-width:4;stroke-linecap:round"/>
+  <g style="${sh}"><rect x="46" y="58" width="128" height="54" rx="27" style="fill:${card}"/><text x="110" y="92" text-anchor="middle" style="font:800 20px var(--font);fill:${ink}">Boarding</text>
+  <rect x="226" y="58" width="96" height="54" rx="27" style="fill:#22a861"/><text x="274" y="92" text-anchor="middle" style="font:800 20px var(--font);fill:#fff">pass</text></g>
+  <circle cx="168" cy="85" r="7" style="fill:#22a861"/><circle cx="232" cy="85" r="7" style="fill:#22a861"/>
+  <text x="200" y="146" text-anchor="middle" style="font:600 14px var(--font);fill:${mut}">посадочный талон</text></svg>`;
+ return`<svg viewBox="0 0 400 170" preserveAspectRatio="xMidYMid slice">${g}
+  <circle cx="340" cy="140" r="70" style="fill:light-dark(#ffdfbd,#4a3417)"/>
+  <g style="${sh}"><path d="M40 34 h196 a16 16 0 0 1 16 16 v34 a16 16 0 0 1 -16 16 h-150 l-22 18 v-18 h-24 a16 16 0 0 1 -16 -16 v-34 a16 16 0 0 1 16 -16z" style="fill:${card}"/>
+  <text x="58" y="74" style="font:800 19px var(--font);fill:${ink}">Where is the gate?</text>
+  <path d="M188 92 h160 a14 14 0 0 1 14 14 v28 a14 14 0 0 1 -14 14 h-12 v16 l-20 -16 h-128 a14 14 0 0 1 -14 -14 v-28 a14 14 0 0 1 14 -14z" style="fill:#ff9f43"/>
+  <text x="200" y="127" style="font:700 16px var(--font);fill:#fff">It's on the right.</text></g></svg>`}
+const lesArt=(L,num=true)=>`<div class="les-art" style="--h:${L.h}">${num?`<span class="num">${S.settings.lang==='ru'?'УРОК':'LESSON'} ${L.li+1}</span>`:''}<span class="e2">${L.e[1]}</span><span class="e1">${L.e[0]}</span><span class="e3">${L.e[2]}</span></div>`;
+
+/* ================= shell views ================= */
+const TABS=[['home','home'],['learn','book'],['review','repeat'],['progress','chart'],['settings','sliders']];
+const HASH={home:'home',learn:'learn',review:'review',progress:'progress',settings:'prefs'};
+function shell(page){return`<div class="shell"><nav class="nav" aria-label="Main">
+ <div class="brand-side"><span class="logo-mark"><img src="icon-192.png" alt="" onerror="this.replaceWith(document.createTextNode('✈'))"></span>TRAVEL ENGLISH</div>
+ ${TABS.map(([k,i])=>`<button class="${UI.tab===k?'on':''}" data-a="tab" data-v="${k}" aria-label="${t('nav_'+k)}">${ic(i)}<span>${t('nav_'+k)}</span></button>`).join('')}</nav>
+ <main class="main">${storageOK?'':`<div class="warn">${t('storage')}</div>`}${page}</main></div>`}
+
+function greeting(){const h=new Date().getHours();return t(h<5?'g_night':h<12?'g_morning':h<18?'g_day':'g_evening')}
+function secCard(s){const open=secOpen(s.si),d=secDone(s.si),cur=s.lessons.find(l=>!isDone(s.si,l.li));
+ const st=d===10?`<span class="pill green">${ic('check','sm')}${t('st_complete')}</span>`:!open?`<span class="pill">${ic('lock','sm')}${t('st_locked')}</span>`:d||S.lessons[s.si+'-0']?`<span class="pill blue">${t('st_prog')}</span>`:`<span class="pill blue">${t('st_avail')}</span>`;
+ const prev=s.si?DATA[s.si-1].title:'';
+ return`<button class="card sec-card ${open?'':'locked'}" data-a="section" data-v="${s.si}">
+ <div class="sec-art">${secArt(s.si)}${open?'':`<span class="lock-badge">${ic('lock','sm')}</span>`}</div>
+ <div class="sec-body"><div class="row between"><span class="h3">${s.title}</span>${st}</div>
+ <div class="muted" style="font-size:15px">${loc(s.sub)}</div>
+ <div class="meta"><span class="pill">${t('lessons_n',{n:10})}</span><span class="pill">${t('prog')}: ${d}/10</span></div>
+ ${bar(d/10)}
+ <div class="row between"><span class="tiny">${open?(cur?`${t('current')}: ${cur.t}`:t('st_complete')):t('sec_lock',{s:prev})}</span>
+ <span class="btn small ${open?'':'ghost'}">${open?(d===10?t('review_btn'):d||S.lessons[s.si+'-0']?t('continue'):t('start')):ic('lock','sm')}</span></div></div></button>`}
+
+function homeView(){const cur=current(),total=lessonsDone()/30,sk=streak();
+ const st=cur&&S.lessons[cur.key];const stg=st?stageName(cur.kind,st.stage==='done'?'test':st.stage):stageName(cur?.kind||'word','learn');
+ const showRem=S.settings.remind&&!S.stats.days.includes(today())&&new Date().toTimeString().slice(0,5)>=S.settings.remindAt;
+ return`<div class="fade-in"><div class="top"><div class="logo"><span class="logo-mark"><img src="icon-192.png" alt="" onerror="this.replaceWith(document.createTextNode('✈'))"></span>TRAVEL ENGLISH</div>
+ <div class="streak" title="${t('streak')}">${ic('flame')}${sk} ${t('days')}</div></div>
+ <section class="card hero"><div style="display:grid;gap:12px"><div class="greet">${greeting()} · Learn English. Travel confidently.</div>
+ <h1 class="h1">Your travel journey starts here.</h1><p class="muted" style="font-size:17px">Learn the English you actually need when traveling.</p>
+ ${cur?`<button class="continue" data-a="continue"><span class="ci">${cur.e[0]}</span><span class="ct"><small>${t('cont')}</small><b>${DATA[cur.si].title} · ${cur.t}</b><span>${t('lesson')} ${cur.li+1} · ${stg}</span></span><span class="go">${ic('right')}</span></button>`
+ :`<button class="continue" data-a="tab" data-v="review"><span class="ci">🏆</span><span class="ct"><small>${t('all_done')}</small><b>${t('go_review')}</b></span><span class="go">${ic('right')}</span></button>`}
+ ${showRem?`<div class="reminder">${ic('bell')}<span>${t('remind_t')}</span></div>`:''}</div>
+ <div style="display:grid;gap:16px"><div class="ring-wrap">${ring(total)}<div><div class="h3">${t('total')}</div><div class="tiny">${lessonsDone()}/30 · ${t('lessons_d').toLowerCase()}</div></div></div>
+ <div class="stats">${[[unitsDone(0),t('words_l')],[unitsDone(1),t('conn_l')],[unitsDone(2),t('sent_l')],[lessonsDone(),t('lessons_d')],[testsPassed(),t('tests_p')],[sk,t('streak')]].map(([v,l])=>`<div class="stat"><b>${v}</b><span>${l}</span></div>`).join('')}</div></div></section>
+ ${travelCard()}<h2 class="h2 sec-gap" style="margin-bottom:14px">${t('sections')}</h2>
+ <div class="grid g2 stagger">${DATA.map(secCard).join('')}</div></div>`}
+
+function travelCard(){const s=S.settings;
+ if(!s.travel)return`<section class="card trav off fade-in"><div class="trav-ic">🌍</div><div style="flex:1"><div class="h3">${t('tr_off_t')}</div><div class="tiny" style="margin-top:2px">${t('tr_off_d')}</div></div><button class="btn" data-a="travel">${t('tr_fly')}</button></section>`;
+ const [en,ru,mean,em]=wordAt(new Date());const day=s.travelSince?Math.floor((Date.now()-s.travelSince)/86400000)+1:1;
+ return`<section class="card trav on fade-in"><div class="row between" style="flex-wrap:wrap;gap:8px"><span class="pill green">✈️ ${t('tr_mode')} · ${t('tr_day',{n:day})}</span><span class="tiny">${t('next_word',{t:hh(nextHour())})}</span></div>
+ <div class="woh"><span class="woh-em">${em}</span><div style="flex:1"><div class="tiny" style="font-weight:800;letter-spacing:.06em">${t('woh').toUpperCase()}</div><div class="woh-en">${esc(en)}</div><div class="woh-ru">${esc(ru)}</div><div class="muted" style="font-size:15px">${esc(mean)}</div></div>
+ <button class="icon-btn" data-say="${esc(en)}" aria-label="${t('listen')}">${ic('vol','sm')}</button></div>
+ <div class="row" style="flex-wrap:wrap"><button class="btn ghost" data-a="travel">${t('tr_back')}</button><button class="btn line small" data-a="tab" data-v="settings" data-w="1">${ic('bell','sm')}${t('how')}</button></div></section>`}
+function travelModal(on){const m=modal(`<div style="font-size:48px">${on?'✈️':'🏠'}</div><h2 class="h2">${t(on?'tr_on_q':'tr_off_q')}</h2><p class="muted">${t('tr_sync_d')}</p>
+ <a class="btn wide" href="${deepLink(on)}" data-m="go">${ic('rotate','sm')}${t('tr_sync')}</a><p class="tiny" style="word-break:break-all">${t('wg_link')}${deepLink(on)}</p>
+ <div style="display:grid;gap:10px"><button class="btn line wide" data-m="how">${t('how')}</button><button class="btn ghost wide" data-m="later">${t('later')}</button></div>`);
+ m.addEventListener('click',e=>{const x=e.target.closest('[data-m]');if(!x)return;if(x.dataset.m==='how'){m.remove();setTab('settings');setTimeout(()=>$('#widget')?.scrollIntoView({behavior:'smooth'}),80)}else if(x.dataset.m==='later')m.remove();else setTimeout(()=>m.remove(),300)})}
+function learnView(){return`<div class="fade-in"><h1 class="h1">${t('learn_title')}</h1><p class="muted" style="margin:8px 0 22px">${t('learn_sub')}${S.settings.free?'':' '+t('seq_note')}</p><div class="grid g2 stagger">${DATA.map(secCard).join('')}</div></div>`}
+
+function lessonCard(L){const s=status(L),st=S.lessons[L.key],lc=learnedCount(L);
+ const pill={done:`<span class="pill green">${ic('check','sm')}${t('st_done')}</span>`,locked:`<span class="pill">${ic('lock','sm')}${t('st_locked')}</span>`,prog:`<span class="pill blue">${t('st_prog')}</span>`,new:`<span class="pill">${t('st_new')}</span>`}[s];
+ const tests=st&&st.last!=null?`${t('last')}: ${st.last}/20${st.attempts>1?` · ${t('best')}: ${st.best}/20`:''}`:t('test_n',{n:L.li+1});
+ return`<button class="card lesson ${s==='locked'?'locked':''} ${UI.justUnlocked===L.key?'unlock-anim':''}" data-a="intro" data-v="${L.key}">${lesArt(L)}
+ <div class="les-body"><div class="row between" style="align-items:flex-start"><span class="h3">${L.t}</span>${pill}</div>
+ <div class="tiny">${loc(L.d)} · ${t('twenty',{u:unitName(L.kind)})}</div>${bar(s==='done'?1:frac(L))}
+ <div class="foot"><span class="tiny"><b style="color:var(--ink)">${lc}/20</b> · ${tests}</span><span class="btn small ${s==='locked'?'ghost':s==='done'?'line':''}">${s==='locked'?ic('lock','sm'):s==='done'?t('review_btn'):s==='prog'?t('continue'):t('start').split(' ')[0]}</span></div></div></button>`}
+
+function sectionView(si){const s=DATA[si],d=secDone(si),cur=s.lessons.find(l=>!isDone(si,l.li)&&lesOpen(si,l.li)),lockedN=s.lessons.filter(l=>!lesOpen(si,l.li)).length;
+ return`<div class="fade-in"><button class="back" data-a="up">${ic('left')}${t('back')}</button>
+ <section class="card sec-head"><div class="sec-art">${secArt(si)}</div><div class="in"><h1 class="h1" style="font-size:clamp(28px,5vw,38px)">${s.title}</h1><p class="muted">${loc(s.desc)}</p>
+ <div class="chips"><span class="pill green">${t('completed')}: ${d}/10</span><span class="pill blue">${t('current')}: ${cur?cur.t:t('none')}</span><span class="pill">${ic('lock','sm')}${t('locked')}: ${lockedN}</span></div>${bar(d/10)}</div></section>
+ <div class="grid g2 stagger sec-gap">${s.lessons.map(lessonCard).join('')}</div></div>`}
+
+function stageName(kind,stage){if(kind==='sentence'){if(stage==='learn')return t('stg_read');if(stage==='recognize')return t('stg_build')}return t('stg_'+stage)}
+function stageDesc(kind,stage){if(kind==='sentence'){if(stage==='learn')return t('d_read');if(stage==='recognize')return t('d_build')}return t('d_'+stage)}
+function introView(key){const L=getL(key),st=S.lessons[key],stages=['learn','recognize','remember','test'];const ci=st?(st.stage==='done'?4:stages.indexOf(st.stage)):0;const done=st?.done;
+ return`<div class="fade-in"><button class="back" data-a="up">${ic('left')}${DATA[L.si].title}</button>
+ <section class="card" style="overflow:hidden">${lesArt(L)}<div style="padding:20px 22px;display:grid;gap:14px">
+ <div><div class="tiny">${t('lesson')} ${L.li+1} · ${t('test_n',{n:L.li+1})}${st&&st.last!=null?` · ${t('last')}: ${st.last}/20 · ${t('best')}: ${st.best}/20`:''}</div><h1 class="h1" style="font-size:clamp(28px,5vw,38px);margin-top:4px">${L.t}</h1><p class="muted">${loc(L.d)} · ${t('twenty',{u:unitName(L.kind)})}</p></div>
+ <div class="stages">${stages.map((g,i)=>`<div class="stage ${i<ci||done&&ci===4?'done':i===ci&&!done?'cur':''}"><span class="dot">${i<ci||(done&&ci===4)?ic('check','sm'):i+1}</span><div><b>${stageName(L.kind,g)}</b><div class="tiny">${stageDesc(L.kind,g)}</div></div></div>`).join('')}</div>
+ ${done&&st.stage==='done'?`<div class="row" style="flex-wrap:wrap"><button class="btn" data-a="restart" data-v="${key}">${ic('rotate','sm')}${t('study_again')}</button><button class="btn ghost" data-a="retest" data-v="${key}">${t('retake')}</button></div>`
+ :`<button class="btn wide" data-a="go" data-v="${key}">${st&&(st.pos||st.stage!=='learn')?t('continue'):t('start')}${ic('right','sm')}</button>`}</div></section>
+ <h2 class="h2 sec-gap" style="margin-bottom:12px">${t('inside')}</h2>
+ <div class="wordlist">${L.items.map(i=>`<div><b>${esc(i.en)}</b><span>${esc(i.ru.join(', '))}</span></div>`).join('')}</div></div>`}
+
+function reviewView(){const src=UI.rvSrc||'m';const mis=Object.entries(S.mistakes).filter(([id,n])=>n>0&&ITEMS[id]).sort((a,b)=>b[1]-a[1]);const learned=learnedItems();
+ const n=src==='m'?mis.length:learned.length;
+ const modes=[['flash','cards'],['choice','list'],['typing','keyb'],['audio','vol'],['mixed','shuffle']];
+ return`<div class="fade-in"><h1 class="h1">REVIEW</h1><p class="muted" style="margin:8px 0 18px">${t('rv_sub')}</p>
+ <div class="seg" style="margin-bottom:16px"><button class="${src==='m'?'on':''}" data-a="rvsrc" data-v="m">${t('src_m')} · ${mis.length}</button><button class="${src==='a'?'on':''}" data-a="rvsrc" data-v="a">${t('src_a')} · ${learned.length}</button></div>
+ ${n?`<div class="modes stagger">${modes.map(([m,i])=>`<button class="mode" data-a="rvstart" data-v="${m}"><span class="mi">${ic(i)}</span><b>${t('m_'+m)}</b><span>${t('md_'+m)}</span></button>`).join('')}</div><p class="tiny" style="margin-top:12px">${t('rv_note')}</p>`
+ :`<div class="card empty"><div class="em">${src==='m'?'🎯':'📚'}</div><p class="muted">${t(src==='m'?'rv_empty_m':'rv_empty_a')}</p>${src==='a'?`<button class="btn" data-a="continue">${t('start')}</button>`:''}</div>`}
+ ${mis.length?`<h2 class="h2 sec-gap" style="margin-bottom:12px">${t('hard')}</h2><div class="card list">${mis.slice(0,30).map(([id,c])=>{const i=ITEMS[id];return`<div class="li"><div class="lt"><b>${esc(i.en)}</b><span>${esc(i.ru[0])} · ${DATA[i.si].title}</span></div><div class="row"><span class="pill red">${c}${t('times')}</span><button class="icon-btn" data-say="${esc(i.en)}" aria-label="${t('listen')}">${ic('vol','sm')}</button></div></div>`}).join('')}</div>`:''}</div>`}
+function learnedItems(){const out=[];DATA.forEach(s=>s.lessons.forEach(l=>{const st=S.lessons[l.key];if(!st)return;const n=st.done||st.stage!=='learn'?20:st.learned||0;out.push(...l.items.slice(0,n))}));return out}
+
+function progressView(){const total=lessonsDone()/30,acc=S.stats.answers?Math.round(S.stats.correct/S.stats.answers*100):0;
+ const k=[[unitsDone(0)+'/200',t('words_l')],[unitsDone(1)+'/200',t('conn_l')],[unitsDone(2)+'/200',t('sent_l')],[lessonsDone()+'/30',t('lessons_d')],[testsPassed()+'/30',t('tests_p')],[streak()+' '+t('days'),t('streak')],[fmtTime(S.stats.time),t('ltime')],[acc+'%',t('accuracy')],[S.stats.answers,t('answers')]];
+ return`<div class="fade-in"><h1 class="h1">PROGRESS</h1><p class="muted" style="margin:8px 0 18px">${t('pr_sub')}</p>
+ <section class="card hero"><div class="ring-wrap">${ring(total,140)}<div><div class="h2">${t('total')}</div><div class="tiny">${Math.round(total*600)}/600 · ${lessonsDone()}/30</div></div></div>
+ <div class="stats">${k.map(([v,l])=>`<div class="stat"><b>${v}</b><span>${l}</span></div>`).join('')}</div></section>
+ <div class="grid g2 sec-gap">${DATA.map(s=>`<div class="card" style="padding:18px 20px;display:grid;gap:10px"><div class="row between"><b>${s.title}</b><span class="tiny">${secDone(s.si)}/10</span></div>${bar(secDone(s.si)/10)}<div class="tiny">${unitsDone(s.si)}/200 ${unitName(s.kind)}</div></div>`).join('')}</div>
+ <h2 class="h2 sec-gap" style="margin-bottom:12px">${t('map30')}</h2><div class="card" style="padding:18px;display:grid;gap:12px">${DATA.map(s=>`<div><div class="tiny" style="margin-bottom:6px">${s.title}</div><div class="lgrid">${s.lessons.map(l=>{const x=status(l);return`<i class="${x==='done'?'d':x==='prog'?'p':''}" title="${l.t}">${x==='locked'?'·':l.li+1}</i>`}).join('')}</div></div>`).join('')}</div>
+ <h2 class="h2 sec-gap" style="margin-bottom:12px">${t('history')}</h2><div class="card" style="padding:8px 20px">${S.history.length?`<div class="hist">${S.history.slice(-12).reverse().map(h=>{const L=getL(h.key);return`<div><span>${DATA[L.si].title.split(' ')[0]} · ${L.t}</span><span class="${h.score>=14?'':'muted'}" style="white-space:nowrap;font-weight:700;color:${h.score>=14?'var(--green-ink)':'var(--red)'}">${h.score}/20 · ${new Date(h.at).toLocaleDateString()}</span></div>`}).join('')}</div>`:`<p class="muted" style="padding:14px 0">${t('no_hist')}</p>`}</div></div>`}
+
+function settingsView(){const s=S.settings;const sw=(k,on)=>`<button class="switch ${on?'on':''}" data-a="set" data-k="${k}" role="switch" aria-checked="${on}" aria-label="${k}"></button>`;
+ return`<div class="fade-in"><h1 class="h1">SETTINGS</h1><p class="muted" style="margin:8px 0 18px">${t('about')}</p>
+ <div class="card list">
+ <div class="li"><div class="lt"><b>${t('sound')}</b><span>${Speech.ok?t('sound_d'):t('no_audio')}</span></div>${sw('sound',s.sound)}</div>
+ <div class="li"><div class="lt"><b>${t('speed')}</b><span id="rateval">${s.rate.toFixed(2)}×</span></div><div class="row"><input type="range" min="0.5" max="1.3" step="0.05" value="${s.rate}" id="rate" aria-label="${t('speed')}"><button class="btn small ghost" data-a="testvoice">${t('test_v')}</button></div></div>
+ ${Speech.ok&&Speech.voices.length?`<div class="li"><div class="lt"><b>${t('voice')}</b></div><select id="voice" aria-label="${t('voice')}" style="max-width:55%"><option value="">${t('voice_auto')}</option>${Speech.voices.map(v=>`<option value="${esc(v.voiceURI)}" ${v.voiceURI===s.voice?'selected':''}>${esc(v.name)} (${v.lang})</option>`).join('')}</select></div>`:''}
+ </div>
+ <div class="card list sec-gap" style="margin-top:16px">
+ <div class="li"><div class="lt"><b>${t('theme')}</b></div><div class="seg">${['system','light','dark'].map(m=>`<button class="${s.mode===m?'on':''}" data-a="mode" data-v="${m}">${t('th_'+m)}</button>`).join('')}</div></div>
+ <div class="li"><div class="lt"><b>${t('lang')}</b></div><div class="seg"><button class="${s.lang==='ru'?'on':''}" data-a="lang" data-v="ru">Русский</button><button class="${s.lang==='en'?'on':''}" data-a="lang" data-v="en">English</button></div></div>
+ </div>
+ <div class="card list" style="margin-top:16px">
+ <div class="li"><div class="lt"><b>${t('free')}</b><span>${t('free_d')}</span></div>${sw('free',s.free)}</div>
+ <div class="li"><div class="lt"><b>${t('remind')}</b><span>${t('remind_d')}</span></div><div class="row">${s.remind?`<input type="time" id="remat" value="${s.remindAt}" aria-label="time">`:''}${sw('remind',s.remind)}</div></div>
+ ${deferredInstall?`<div class="li"><div class="lt"><b>${t('install')}</b><span>${t('install_d')}</span></div><button class="btn small" data-a="install">${ic('download','sm')}</button></div>`:''}
+ </div>
+ <h2 class="h2 sec-gap" id="widget" style="margin-bottom:6px">${t('wg_t')}</h2><p class="muted" style="margin-bottom:12px">${t('wg_d')}</p>
+ <div class="card" style="padding:18px 20px;display:grid;gap:14px">
+ <div class="li" style="padding:0;border:0;min-height:0"><div class="lt"><b>${t('tr_mode')}</b><span>${s.travel?'✈️ '+t('tr_day',{n:Math.floor((Date.now()-(s.travelSince||Date.now()))/86400000)+1}):'🏠'}</span></div><button class="switch ${s.travel?'on':''}" data-a="travel" role="switch" aria-checked="${s.travel}" aria-label="${t('tr_mode')}"></button></div>
+ <ol class="steps">${[1,2,3,4,5,6].map(i=>`<li>${t('wg_s'+i)}</li>`).join('')}</ol>
+ <div class="row" style="flex-wrap:wrap"><button class="btn" data-a="copyscript">${ic('cards','sm')}${t('wg_copy')}</button><a class="btn line" href="${STORE}" target="_blank" rel="noopener">${t('wg_store')}</a></div>
+ <p class="tiny">${t('wg_note')}</p><textarea id="scriptbox" readonly hidden style="width:100%;height:160px;font:12px ui-monospace,monospace;border-radius:12px;border:0;background:var(--soft);padding:10px"></textarea></div>
+ <div class="card list" style="margin-top:16px"><div class="li"><div class="lt"><b style="color:var(--red)">${t('reset')}</b><span>${t('reset_d')}</span></div><button class="btn small red" data-a="reset">${t('do_reset')}</button></div></div>
+ <p class="tiny" style="margin-top:14px">${t('offline')}</p></div>`}
+
+/* ================= full-screen views ================= */
+function sTop(f,cnt){const html=`<div class="s-top"><button class="icon-btn" data-a="exit" aria-label="Close">${ic('x')}</button><div class="bar"><i style="width:${lastFrac*100}%" data-w="${f*100}"></i></div><span class="cnt">${cnt}</span></div>`;lastFrac=f;return html}
+const sLabel=(txt,extra='')=>`<div class="s-label">${txt}${extra}</div>`;
+const audioBtns=(txt,big)=>`<div class="audio-row">${big?`<button class="audio big" data-say="${esc(txt)}" aria-label="${t('listen')}">${ic('vol')}</button>`:`<button class="audio" data-say="${esc(txt)}">${ic('vol')}${t('listen')}</button>`}<button class="audio" data-say="${esc(txt)}" data-slow="1">🐢 ${t('slow')}</button></div>`;
+
+function lessonFull(key){const L=getL(key),st=LS(key);
+ if(st.stage==='done'){st.stage='learn';st.pos=0}
+ if(st.intro){const n=st.stage==='test'?20:(st.queue?.length||20);const si=['learn','recognize','remember','test'].indexOf(st.stage);
+  return{html:sTop(0,L.t)+`<div class="s-body"><div class="card study" style="margin-top:20px"><div class="em">${['📖','🎯','🧠','🏁'][si]}</div><div class="tiny" style="font-weight:800;letter-spacing:.08em">${t('stage')} ${si+1}/4</div><div class="en" style="font-size:clamp(28px,6vw,38px)">${stageName(L.kind,st.stage)}</div><div class="ru">${stageDesc(L.kind,st.stage)}</div><span class="pill blue">${t('questions',{n})}</span></div></div>
+  <div class="s-foot"><div class="in"><button class="btn wide" data-a="stagego">${t('stage_start')}</button></div></div>`}}
+ if(st.stage==='learn'){const it=L.items[st.pos],sent=L.kind==='sentence',hid=sent&&S.settings.hideTr;
+  return{html:sTop(st.pos/20,`${st.pos+1}/20`)+sLabel(stageName(L.kind,'learn'))+`<div class="s-body"><div class="card study ${sent?'sent':''}" style="margin-top:14px" key="${it.id}">
+  <div class="em">${it.em||L.e[st.pos%3]}</div><div class="en">${esc(it.en)}</div>${audioBtns(it.en)}
+  <div class="ru ${hid?'hid':''}" data-a="${hid?'reveal':''}">${esc(it.ru.join(', '))}</div>
+  ${sent?`<button class="btn small ghost" data-a="hidetr">${ic(hid?'eye':'eyeoff','sm')}${t(hid?'show_tr':'hide_tr')}</button>`:''}
+  <div class="tiny">${st.pos+1} / 20</div></div></div>
+  <div class="s-foot"><div class="in"><button class="btn ghost" data-a="lprev" ${st.pos?'':'disabled'} style="flex:0 0 auto">${ic('left')}</button><button class="btn wide" data-a="lnext">${t('next')}${ic('right','sm')}</button></div></div>`,
+  mount:()=>Speech.say(it.en,{silent:true})}}
+ if(st.stage==='recognize'||st.stage==='remember'){const[ii,ty]=st.queue[st.qpos];const it=L.items[ii];
+  return{html:sTop(st.qpos/st.queue.length,`${st.qpos+1}/${st.queue.length}`)+sLabel(stageName(L.kind,st.stage))+`<div class="s-body"></div><div class="s-foot"><div class="in"></div></div>`,
+  mount:()=>mountQ({ty,it,test:false},ok=>{record(it,ok);if(!ok&&!st.retried.includes(ii)){st.queue.push([ii,ty]);st.retried.push(ii)}save()},()=>{st.qpos++;if(st.qpos>=st.queue.length)nextStage(key);save();render()})}}
+ if(st.stage==='test'){if(!st.test)st.test={q:queue(L,'test'),pos:0,correct:0,wrong:[],start:Date.now()};const T=st.test;const[ii,ty]=T.q[T.pos];const it=L.items[ii];
+  return{html:sTop(T.pos/20,`${T.pos+1}/20`)+sLabel(t('stg_test'),` · ${t('test_n',{n:L.li+1})}`)+`<div class="s-body"></div><div class="s-foot"><div class="in"></div></div>`,
+  mount:()=>mountQ({ty,it,test:true},ok=>{record(it,ok);if(ok)T.correct++;else T.wrong.push(ii);save()},()=>{T.pos++;if(T.pos>=20)finishTest(key);else{save();render()}})}}
+}
+function nextStage(key){const L=getL(key),st=LS(key);const order=['learn','recognize','remember','test'];const n=order[order.indexOf(st.stage)+1];
+ st.stage=n;st.qpos=0;st.retried=[];st.intro=true;st.queue=n==='recognize'||n==='remember'?queue(L,n):null;if(n==='test')st.test=null}
+function finishTest(key){const L=getL(key),st=LS(key),T=st.test,score=T.correct;const before=secDone(L.si);
+ st.attempts++;st.last=score;st.best=Math.max(st.best??0,score);S.history.push({key,score,at:Date.now()});S.history=S.history.slice(-200);
+ const pass=score>=14,res={type:'result',key,score,wrong:T.wrong.map(i=>L.items[i].id),pass,secs:Math.round((Date.now()-T.start)/1000),attempt:st.attempts};
+ if(pass){st.done=true;st.stage='done';st.test=null;st.queue=null;res.secDone=before<10&&secDone(L.si)===10;const nx=L.li<9?DATA[L.si].lessons[L.li+1]:null;res.next=nx?nx.key:null}
+ else{st.stage='learn';st.pos=0;st.queue=null;st.test=null;st.intro=true;st.qpos=0}
+ save();UI.full=res;render()}
+
+function resultFull(r){const L=getL(r.key),p=r.score/20;
+ return{html:`<div class="s-body" style="padding-top:max(26px,env(safe-area-inset-top))"><div class="result fade-in">
+ <div class="tiny" style="font-weight:800;letter-spacing:.08em">${t('test_n',{n:L.li+1})} · ${L.t}</div>${ring(p,170)}
+ <h1 class="h1">${r.pass?t('pass_t'):t('fail_t')}</h1><p class="muted" style="max-width:480px">${r.pass?(r.next?t('pass_s'):t('pass_last')):t('fail_s')}</p>
+ <div class="kpis">${[[r.score+'/20',t('correct')],[20-r.score,t('mistakes')],[Math.round(p*100)+'%',t('score')]].map(([v,l])=>`<div class="stat"><b>${v}</b><span>${l}</span></div>`).join('')}</div>
+ <div class="kpis">${[[fmtTime(r.secs).replace(/^0 \S+/,'<1 '+t('min')),t('time')],[(S.lessons[r.key].best||0)+'/20',t('best')],['#'+r.attempt,t('attempt')]].map(([v,l])=>`<div class="stat"><b style="font-size:18px">${v}</b><span>${l}</span></div>`).join('')}</div>
+ ${r.wrong.length?`<div style="width:100%;text-align:left"><h2 class="h3" style="margin:6px 0 10px">${t('to_repeat')}</h2><div class="misslist">${r.wrong.map(id=>{const i=ITEMS[id];return`<div class="miss"><b>${esc(i.en)}</b><span>${esc(i.ru[0])}</span><button class="icon-btn" data-say="${esc(i.en)}" aria-label="${t('listen')}">${ic('vol','sm')}</button></div>`}).join('')}</div></div>`:''}
+ </div></div><div class="s-foot"><div class="in">${r.pass?`<button class="btn wide green" data-a="resnext">${t('next')}</button>`:`<button class="btn ghost" data-a="reslessons">${t('to_lessons')}</button><button class="btn wide" data-a="resretry">${ic('rotate','sm')}${t('repeat_lesson')}</button>`}</div></div>`,
+ mount:()=>{if(r.pass&&!r.shown){r.shown=1;confetti();beep(true)}}}}
+
+function secDoneFull(si){const s=DATA[si],nx=DATA[si+1];const avg=Math.round(s.lessons.reduce((a,l)=>a+(S.lessons[l.key]?.best||0),0)/10/20*100);
+ return{html:`<div class="s-body" style="padding-top:max(40px,env(safe-area-inset-top))"><div class="result fade-in"><div style="font-size:96px;line-height:1">🏆</div>
+ <h1 class="h1">${t('sec_done')}</h1><p class="muted">${t('sec_done_s',{s:s.title})}</p>
+ <div class="kpis">${[['200',unitName(s.kind)],['10/10',t('lessons_d')],[avg+'%',t('best')]].map(([v,l])=>`<div class="stat"><b>${v}</b><span>${l}</span></div>`).join('')}</div>
+ <div class="card" style="width:100%;overflow:hidden">${nx?secArt(si+1).replace('<svg','<svg style="display:block;width:100%;height:150px"'):''}</div></div></div>
+ <div class="s-foot"><div class="in">${nx?`<button class="btn wide green" data-a="opensec" data-v="${si+1}">${t('next_sec',{s:nx.title})}</button>`:`<button class="btn wide green" data-a="tab" data-v="review">${t('to_review')}</button>`}</div></div>`,mount:()=>confetti()}}
+
+/* ---------- review session ---------- */
+function startReview(mode){const src=UI.rvSrc||'m';let items=src==='m'?Object.keys(S.mistakes).filter(id=>ITEMS[id]&&S.mistakes[id]>0).map(id=>ITEMS[id]):learnedItems();
+ if(!items.length)return;if(mode==='audio'&&!audioOK()){toast(Speech.ok?t('audio_off'):t('no_audio'));return}
+ const w=it=>1+(S.mistakes[it.id]||0)*3;const chosen=[];const pool2=items.slice();
+ while(chosen.length<Math.min(12,items.length)){const tot=pool2.reduce((a,x)=>a+w(x),0);let r=Math.random()*tot;let k=0;for(;k<pool2.length;k++){r-=w(pool2[k]);if(r<=0)break}chosen.push(pool2.splice(Math.min(k,pool2.length-1),1)[0])}
+ const T=it=>{const k=it.kind;let list={flash:['flash'],choice:['c_en2ru','c_ru2en','c_img'],typing:k==='word'?['t_ru2en','t_en2ru','t_img']:['t_ru2en'],audio:['c_audio','t_audio'],
+  mixed:[...new Set([...TYPES[k].recognize,...TYPES[k].remember,'flash'])]}[mode];list=list.filter(x=>x==='flash'||avail(x,it));return pick(list.length?list:['c_en2ru'])};
+ RV={mode,q:chosen.map(it=>[it.id,T(it)]),pos:0,correct:0,wrong:[]};UI.full={type:'review'};lastFrac=0;render()}
+function reviewFull(){if(RV.pos>=RV.q.length){const p=RV.correct/RV.q.length;return{html:`<div class="s-body" style="padding-top:max(30px,env(safe-area-inset-top))"><div class="result fade-in">${ring(p,160)}<h1 class="h1">${t('rv_done')}</h1>
+ <div class="kpis">${[[RV.correct+'/'+RV.q.length,t('correct')],[RV.wrong.length,t('mistakes')],[Object.keys(S.mistakes).length,t('hard')]].map(([v,l])=>`<div class="stat"><b>${v}</b><span>${l}</span></div>`).join('')}</div>
+ ${RV.wrong.length?`<div class="misslist">${RV.wrong.map(id=>{const i=ITEMS[id];return`<div class="miss"><b>${esc(i.en)}</b><span>${esc(i.ru[0])}</span></div>`}).join('')}</div>`:''}</div></div>
+ <div class="s-foot"><div class="in"><button class="btn ghost" data-a="rvexit">${t('done')}</button><button class="btn wide" data-a="rvagain">${ic('rotate','sm')}${t('again')}</button></div></div>`}}
+ const[id,ty]=RV.q[RV.pos],it=ITEMS[id];
+ return{html:sTop(RV.pos/RV.q.length,`${RV.pos+1}/${RV.q.length}`)+sLabel('REVIEW · '+t('m_'+RV.mode).toUpperCase())+`<div class="s-body"></div><div class="s-foot"><div class="in"></div></div>`,
+ mount:()=>mountQ({ty,it,test:false},ok=>{record(it,ok,true);if(ok)RV.correct++;else RV.wrong.push(id)},()=>{RV.pos++;render()})}}
+
+/* ================= question engine ================= */
+function mountQ(q,onAnswer,onNext){const body=$('.s-body'),foot=$('.s-foot .in');const it=q.it,ty=fixType(q.ty,it),sent=it.kind==='sentence';let answered=false;keyHandler=null;
+ const ask=`<div class="ask">${t('a_'+ty)}</div>`;window.__TEq={it,ty};
+ const finish=ok=>{if(answered)return;answered=true;keyHandler=null;onAnswer(ok);beep(ok);feedback(ok,it,onNext)};
+ const choice=(opts,label,prompt,cb)=>{body.innerHTML=`<div class="q">${ask}${prompt}<div class="opts ${sent?'':'two'}">${opts.map((x,i)=>`<button class="opt" data-i="${i}"><kbd>${i+1}</kbd><span>${esc(label(x))}</span></button>`).join('')}</div></div>`;foot.innerHTML='';
+  const box=$('.opts',body);const choose=i=>{if(answered||!opts[i])return;const ok=cb?cb(i):opts[i].id===it.id;box.classList.add('done');const b=$$('.opt',box);b[i].classList.add(ok?'ok':'bad');if(!ok){const ci=cb?opts.findIndex((x,j)=>cb(j,true)):opts.findIndex(x=>x.id===it.id);if(b[ci])b[ci].classList.add('ok')}finish(ok)};
+  box.addEventListener('click',e=>{const b=e.target.closest('.opt');if(b)choose(+b.dataset.i)});keyHandler=e=>{if(/^[1-4]$/.test(e.key))choose(+e.key-1)}};
+ const big=`<div class="center"><button class="audio big" data-say="${esc(it.en)}" aria-label="${t('listen')}">${ic('vol')}</button></div><div class="audio-row"><button class="audio" data-say="${esc(it.en)}" data-slow="1">🐢 ${t('slow')}</button></div>`;
+ const sp=()=>setTimeout(()=>Speech.say(it.en,{silent:true,btn:$('.audio.big')}),250);
+ const pEn=`<div class="prompt ${sent?'sent':''}">${esc(it.en)}</div><div><button class="audio" data-say="${esc(it.en)}">${ic('vol')}${t('listen')}</button></div>`;
+ const pRu=`<div class="prompt ru ${sent?'sent':''}">${esc(it.ru[0])}</div>`;
+ if(ty==='flash'){body.innerHTML=`<div class="q">${ask}<div class="flash" id="fl"><div class="fl"><div class="face card">${it.em?`<div style="font-size:64px">${it.em}</div>`:''}<div class="prompt ${sent?'sent':''}">${esc(it.en)}</div><div class="tiny">${t('flip')}</div></div><div class="face rear card"><div class="prompt ru ${sent?'sent':''}">${esc(it.ru.join(', '))}</div><div class="tiny">${esc(it.en)}</div></div></div></div><div class="audio-row"><button class="audio" data-say="${esc(it.en)}">${ic('vol')}${t('listen')}</button></div></div>`;
+  foot.innerHTML=`<button class="btn red" data-k="0" disabled>${t('didnt')}</button><button class="btn green" data-k="1" disabled>${t('knew')}</button>`;
+  const fl=$('#fl');const flip=()=>{fl.classList.toggle('flipped');$$('[data-k]',foot).forEach(b=>b.disabled=false)};fl.addEventListener('click',flip);
+  $$('[data-k]',foot).forEach(b=>b.addEventListener('click',()=>finish(b.dataset.k==='1')));keyHandler=e=>{if(e.key===' '){e.preventDefault();flip()}};return}
+ if(ty[0]==='c'){const field=ty==='c_en2ru'||ty==='c_audio'?'ru':'en';const opts=options(it,ty==='c_img'?'em':field);
+  choice(opts,x=>field==='ru'?x.ru[0]:x.en,ty==='c_en2ru'?pEn:ty==='c_ru2en'?pRu:ty==='c_img'?`<div class="pic">${it.em}</div>`:big);if(ty==='c_audio')sp();return}
+ if(ty[0]==='t'){const tgt=ty==='t_en2ru'?'ru':'en';const pat=it.en.split(' ').map(w=>w[0]+w.slice(1).replace(/[a-z]/gi,'•')).join('   ');
+  const prompt=ty==='t_ru2en'?pRu:ty==='t_en2ru'?pEn:ty==='t_img'?`<div class="pic">${it.em}</div><div class="hintline">${esc(pat)}</div>`:big;
+  const canHint=!q.test&&ty==='t_ru2en';
+  body.innerHTML=`<div class="q">${ask}${prompt}<input class="field" id="ans" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done" lang="${tgt==='ru'?'ru':'en'}" placeholder="${t(tgt==='ru'?'ph_ru':'ph_en')}">${canHint?`<div id="hintbox"></div>`:''}</div>`;
+  foot.innerHTML=`${canHint?`<button class="btn ghost" id="hintb" style="flex:0 0 auto" aria-label="${t('hint')}">${ic('bulb')}</button>`:''}<button class="btn wide" id="chk" disabled>${t('check')}</button>`;
+  const inp=$('#ans'),chk=$('#chk');inp.addEventListener('input',()=>chk.disabled=!inp.value.trim());
+  const go=()=>{if(answered||!inp.value.trim())return;const ok=tgt==='en'?okEn(it,inp.value):okRu(it,inp.value);inp.classList.add(ok?'ok':'bad');inp.readOnly=true;finish(ok)};
+  chk.addEventListener('click',go);inp.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();e.stopPropagation();go()}});
+  if(canHint)$('#hintb').addEventListener('click',()=>{$('#hintbox').innerHTML=`<div class="hintline">${esc(pat)}</div>`});
+  if(ty==='t_audio')sp();setTimeout(()=>inp.focus({preventScroll:true}),60);return}
+ if(ty==='build'){const tk=toks(it.en);let bank=tk.map(w=>({w}));if(q.test){const mine=new Set(tk.map(x=>x.toLowerCase()));const extra=shuffle([...new Set(pool(it).slice(0,8).flatMap(x=>toks(x.en)))]).filter(w=>!mine.has(w.toLowerCase())).slice(0,2);bank=bank.concat(extra.map(w=>({w})))}
+  bank=shuffle(bank).map((b,i)=>({...b,i}));let ans=[];
+  body.innerHTML=`<div class="q">${ask}${pRu}<div class="build-ans" id="ba" data-ph="${t('ph_build')}"></div><div class="bank" id="bk">${bank.map(b=>`<button class="tile" data-i="${b.i}">${esc(b.w)}</button>`).join('')}</div></div>`;
+  foot.innerHTML=`<button class="btn ghost" id="clr" style="flex:0 0 auto" aria-label="${t('clear')}">${ic('rotate')}</button><button class="btn wide" id="chk" disabled>${t('check')}</button>`;
+  const ba=$('#ba'),bk=$('#bk'),chk=$('#chk');
+  const draw=()=>{ba.innerHTML=ans.map(i=>`<button class="tile" data-i="${i}">${esc(bank[i].w)}</button>`).join('');$$('.tile',bk).forEach(b=>b.classList.toggle('used',ans.includes(+b.dataset.i)));chk.disabled=!ans.length};
+  bk.addEventListener('click',e=>{const b=e.target.closest('.tile');if(!b||answered)return;ans.push(+b.dataset.i);draw()});
+  ba.addEventListener('click',e=>{const b=e.target.closest('.tile');if(!b||answered)return;ans=ans.filter(i=>i!==+b.dataset.i);draw()});
+  $('#clr').addEventListener('click',()=>{if(!answered){ans=[];draw()}});
+  chk.addEventListener('click',()=>{if(answered)return;const ok=normEn(ans.map(i=>bank[i].w).join(' '))===normEn(it.en);ba.classList.add(ok?'ok':'bad');finish(ok)});return}
+ if(ty==='gap'){const tk=it.en.split(' '),cl=w=>w.replace(/[.!?,]/g,'');const cand=tk.map((w,i)=>i).filter(i=>cl(tk[i]).replace(/[^a-z]/gi,'').length>=2);const idx=pick(cand.length?cand:[0]);const word=cl(tk[idx]);
+  const mine=new Set(tk.map(w=>cl(w).toLowerCase()));const fix=w=>idx===0?w[0].toUpperCase()+w.slice(1):(w==='I'||/^[A-Z]{2,}/.test(w)||/^(Wi-Fi|Uzbekistan|Sundays|English)$/.test(w))?w:w.toLowerCase();
+  let others=[];for(const x of pool(it)){for(const w of x.en.split(' ').map(cl)){if(w.replace(/[^a-z]/gi,'').length>=2&&!mine.has(w.toLowerCase())&&!others.some(o=>o.toLowerCase()===w.toLowerCase()))others.push(w)}if(others.length>=12)break}
+  window.__TEq.right=fix(word);const opts=shuffle([fix(word),...shuffle(others).slice(0,3).map(fix)]);const right=fix(word);
+  const shown=tk.map((w,i)=>i===idx?`<u>&nbsp;?&nbsp;</u>${esc(w.slice(cl(w).length))}`:esc(w)).join(' ');
+  choice(opts.map((w,i)=>({id:i,w})),x=>x.w,`<div class="tiny" style="font-size:15px">${esc(it.ru[0])}</div><div class="gap-text">${shown}</div>`,(i,probe)=>opts[i]===right);
+  const box=$('.opts',body);box.addEventListener('click',()=>{if(answered)$('.gap-text u',body).textContent=word});
+  const kh=keyHandler;keyHandler=e=>{kh(e);if(answered)$('.gap-text u',body).textContent=word};return}
+ if(ty==='match'){const set=matchSet(it);const L=shuffle(set),R=shuffle(set);let sel=null,miss=0,got=0;
+  body.innerHTML=`<div class="q">${ask}<div class="match"><div class="col">${L.map(p=>`<button class="mt" data-s="l" data-id="${p.id}">${esc(p.l)}</button>`).join('')}</div><div class="col">${R.map(p=>`<button class="mt" data-s="r" data-id="${p.id}">${esc(p.r)}</button>`).join('')}</div></div></div>`;foot.innerHTML='';
+  $('.match',body).addEventListener('click',e=>{const b=e.target.closest('.mt');if(!b||answered||b.classList.contains('ok'))return;
+   if(!sel||sel.dataset.s===b.dataset.s){if(sel)sel.classList.remove('sel');sel=b;b.classList.add('sel');return}
+   if(sel.dataset.id===b.dataset.id){sel.classList.remove('sel');sel.classList.add('ok');b.classList.add('ok');got++;Speech.say(ITEMS[b.dataset.id].en,{silent:true});sel=null;if(got===4)finish(miss===0)}
+   else{miss++;const a=sel;a.classList.remove('sel');[a,b].forEach(x=>{x.classList.add('bad');setTimeout(()=>x.classList.remove('bad'),450)});sel=null}});return}
+}
+function feedback(ok,it,onNext){$('.s-foot').style.display='none';const fb=document.createElement('div');fb.className='feedback '+(ok?'ok':'bad');
+ fb.innerHTML=`<div class="in"><div class="t"><span class="bub">${ic(ok?'check':'x','sm')}</span>${t(ok?'ok_t':'bad_t')}</div>
+ <div class="ans">${ok?'':`<small>${t('corr_ans')}:</small>`}${esc(it.en)}<small>${esc(it.ru.join(', '))}</small></div>
+ <div class="row"><button class="icon-btn" data-say="${esc(it.en)}" aria-label="${t('listen')}" style="background:var(--card)">${ic('vol','sm')}</button><button class="btn wide ${ok?'green':'red'}" id="nextq">${t('next')}</button></div></div>`;
+ $('.session').appendChild(fb);const nb=$('#nextq');let gone=false;const go=()=>{if(gone)return;gone=true;onNext()};nb.addEventListener('click',go);
+ setTimeout(()=>nb.focus({preventScroll:true}),30);if(!ok)Speech.say(it.en,{silent:true})}
+
+/* ================= render ================= */
+function render(){const app=$('#app');keyHandler=null;$$('.feedback').forEach(x=>x.remove());document.documentElement.lang=S.settings.lang;document.documentElement.dataset.mode=S.settings.mode;
+ if(UI.full){const f=UI.full;let v;
+  if(f.type==='lesson')v=lessonFull(f.key);else if(f.type==='result')v=resultFull(f);else if(f.type==='sectionDone')v=secDoneFull(f.si);else if(f.type==='review')v=reviewFull();
+  app.innerHTML=`<div class="session">${v.html}</div>`;animateBars();if(v.mount)v.mount();return}
+ lastFrac=0;let page;
+ if(UI.sub?.type==='section')page=sectionView(UI.sub.si);else if(UI.sub?.type==='intro')page=introView(UI.sub.key);
+ else page={home:homeView,learn:learnView,review:reviewView,progress:progressView,settings:settingsView}[UI.tab]();
+ app.innerHTML=shell(page);animateBars();
+ if(UI.justUnlocked){setTimeout(()=>{UI.justUnlocked=null},2500)}
+ const rate=$('#rate');if(rate)rate.addEventListener('input',()=>{S.settings.rate=+rate.value;$('#rateval').textContent=S.settings.rate.toFixed(2)+'×';save()});
+ const vs=$('#voice');if(vs)vs.addEventListener('change',()=>{S.settings.voice=vs.value;save();Speech.say('Welcome to Travel English.')});
+ const ra=$('#remat');if(ra)ra.addEventListener('change',()=>{S.settings.remindAt=ra.value||'19:00';save()});}
+function setTab(tab,push=true){UI.tab=tab;UI.sub=null;UI.full=null;if(push)try{history.replaceState(null,'','#'+HASH[tab])}catch(e){try{location.hash=HASH[tab]}catch(_){}}render();scrollTo(0,0)}
+function openLesson(key){const L=getL(key);if(!lesOpen(L.si,L.li)){toast(t('sec_lock',{s:L.li?DATA[L.si].lessons[L.li-1].t:DATA[L.si-1]?.title||''}));return}UI.sub={type:'intro',key};render();scrollTo(0,0)}
+function goLesson(key){const st=LS(key);if(st.stage==='learn'&&st.pos===0&&!st.attempts)st.intro=true;UI.full={type:'lesson',key};lastFrac=0;save();render()}
+
+/* ================= events ================= */
+document.addEventListener('click',e=>{lastAct=Date.now();
+ const sayb=e.target.closest('[data-say]');if(sayb){e.stopPropagation();Speech.say(sayb.dataset.say,{slow:!!sayb.dataset.slow,btn:sayb});return}
+ const b=e.target.closest('[data-a]');if(!b||!b.dataset.a)return;const a=b.dataset.a,v=b.dataset.v;
+ switch(a){
+ case'tab':setTab(v);if(b.dataset.w)setTimeout(()=>$('#widget')?.scrollIntoView({behavior:'smooth'}),80);break;
+ case'section':{const si=+v;if(!secOpen(si)){toast(t('sec_lock',{s:DATA[si-1].title}));return}UI.sub={type:'section',si};render();scrollTo(0,0);break}
+ case'up':if(UI.sub?.type==='intro'){UI.sub={type:'section',si:getL(UI.sub.key).si}}else UI.sub=null;render();scrollTo(0,0);break;
+ case'intro':openLesson(v);break;
+ case'continue':{const c=current();if(c){UI.sub={type:'intro',key:c.key};goLesson(c.key)}else setTab('review');break}
+ case'go':goLesson(v);break;
+ case'restart':{const st=LS(v);Object.assign(st,{stage:'learn',pos:0,queue:null,qpos:0,test:null,intro:true});goLesson(v);break}
+ case'retest':{const st=LS(v);Object.assign(st,{stage:'test',test:null,intro:true});goLesson(v);break}
+ case'exit':{const f=UI.full;UI.full=null;if(f?.type==='lesson'){UI.sub={type:'intro',key:f.key};toast(t('saved'))}else if(f?.type==='review'){RV=null}save();render();break}
+ case'stagego':{LS(UI.full.key).intro=false;save();render();break}
+ case'lnext':{const st=LS(UI.full.key);st.pos++;st.learned=Math.max(st.learned||0,st.pos);markDay();if(st.pos>=20)nextStage(UI.full.key);save();render();break}
+ case'lprev':{const st=LS(UI.full.key);if(st.pos>0)st.pos--;save();render();break}
+ case'hidetr':S.settings.hideTr=!S.settings.hideTr;save();render();break;
+ case'reveal':b.classList.remove('hid');b.dataset.a='';break;
+ case'resnext':{const r=UI.full,L=getL(r.key);if(r.secDone){UI.full={type:'sectionDone',si:L.si};render();break}UI.full=null;UI.sub={type:'section',si:L.si};UI.justUnlocked=r.next;render();if(r.next)toast(t('unlocked',{s:getL(r.next).t}));const el=r.next&&$(`[data-v="${r.next}"]`);if(el)el.scrollIntoView({block:'center',behavior:'smooth'});break}
+ case'reslessons':{const L=getL(UI.full.key);UI.full=null;UI.sub={type:'section',si:L.si};render();break}
+ case'resretry':{const k=UI.full.key;UI.sub={type:'intro',key:k};UI.full={type:'lesson',key:k};lastFrac=0;render();break}
+ case'opensec':UI.full=null;UI.tab='learn';UI.sub={type:'section',si:+v};UI.justUnlocked=DATA[+v].lessons[0].key;render();scrollTo(0,0);break;
+ case'rvsrc':UI.rvSrc=v;render();break;
+ case'rvstart':startReview(v);break;
+ case'rvagain':startReview(RV.mode);break;
+ case'rvexit':RV=null;UI.full=null;render();break;
+ case'set':S.settings[b.dataset.k]=!S.settings[b.dataset.k];if(b.dataset.k==='sound'&&!S.settings.sound)try{speechSynthesis.cancel()}catch(_){}save();render();break;
+ case'mode':S.settings.mode=v;save();render();break;
+ case'lang':S.settings.lang=v;save();render();break;
+case'travel':{const on=!S.settings.travel;S.settings.travel=on;S.settings.travelSince=on?Date.now():null;markDay();save();render();if(on)confetti();travelModal(on);break}
+ case'copyscript':{const src=$('#widget-src')?.textContent.trim()||'';const box=$('#scriptbox');const show=()=>{box.hidden=false;box.value=src;box.focus();box.select();toast(t('wg_copied'))};
+  try{navigator.clipboard.writeText(src).then(()=>toast(t('wg_copied')),show)}catch(_){show()}break}
+ case'testvoice':Speech.say('Where is the nearest pharmacy?',{btn:b});break;
+ case'install':if(deferredInstall){deferredInstall.prompt();deferredInstall.userChoice.finally(()=>{deferredInstall=null;render()})}break;
+ case'reset':{const m=modal(`<div style="font-size:44px">⚠️</div><h2 class="h2">${t('reset_q')}</h2><p class="muted">${t('reset_qd')}</p><div class="row"><button class="btn ghost wide" data-m="no">${t('cancel')}</button><button class="btn red wide" data-m="yes">${t('do_reset')}</button></div>`);
+  m.addEventListener('click',ev=>{const x=ev.target.closest('[data-m]');if(!x)return;if(x.dataset.m==='yes'){const keep=S.settings;S=fresh();S.settings=keep;save();toast(t('reset_ok'));UI.sub=null}m.remove();render()});break}
+ }});
+document.addEventListener('keydown',e=>{lastAct=Date.now();const fb=$('.feedback');
+ if(fb&&e.key==='Enter'&&e.target.tagName!=='BUTTON'){e.preventDefault();$('#nextq')?.click();return}
+ if(!fb&&keyHandler&&e.target.tagName!=='INPUT')keyHandler(e);
+ if(e.key==='Escape'&&$('.modal-bg'))$('.modal-bg').remove()});
+document.addEventListener('pointerdown',()=>lastAct=Date.now(),{passive:true});
+addEventListener('hashchange',()=>{const h=location.hash.slice(1);const tab=Object.keys(HASH).find(k=>HASH[k]===h);if(tab&&tab!==UI.tab&&!UI.full)setTab(tab,false)});
+addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredInstall=e;if(UI.tab==='settings'&&!UI.full)render()});
+let lastHour=hourIdx(new Date());setInterval(()=>{const h=hourIdx(new Date());if(h!==lastHour){lastHour=h;if(!UI.full&&!UI.sub&&UI.tab==='home'&&!$('.modal-bg'))render()}},30000);
+let tick=0;setInterval(()=>{if(UI.full&&(UI.full.type==='lesson'||UI.full.type==='review')&&!document.hidden&&Date.now()-lastAct<60000){S.stats.time+=5;if(++tick%6===0)save()}},5000);
+addEventListener('visibilitychange',()=>{if(document.hidden)save()});
+addEventListener('pagehide',save);
+
+/* ================= boot ================= */
+Speech.init();
+{const h=location.hash.slice(1);const tab=Object.keys(HASH).find(k=>HASH[k]===h);if(tab)UI.tab=tab}
+render();
+if('serviceWorker'in navigator&&/^https?:$/.test(location.protocol)){try{addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{})})}catch(e){}}
+window.__TE={S:()=>S,UI,DATA,okEn,okRu,normEn};
+}
+
+</script>
+</body>
+</html>
